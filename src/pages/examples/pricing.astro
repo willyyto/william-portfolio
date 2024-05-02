@@ -9,123 +9,125 @@ import Layout from '@layouts/Layout.astro';
 import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
 
 const questions = [
-  {
-    id: 'faq-1',
-    name: 'How do I know which pricing plan is right for me?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-2',
-    name: 'How can I upgrade, downgrade, or cancel my plan?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-3',
-    name: "What does 'lifetime access' mean exactly?",
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-4',
-    name: "What does 'free updates' mean exactly?",
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-5',
-    name: 'Do you offer a free trial?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-6',
-    name: 'How can I request support?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
+    {
+        id: 'faq-1',
+        name: 'How do I know which pricing plan is right for me?',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
+    {
+        id: 'faq-2',
+        name: 'How can I upgrade, downgrade, or cancel my plan?',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
+    {
+        id: 'faq-3',
+        name: "What does 'lifetime access' mean exactly?",
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
+    {
+        id: 'faq-4',
+        name: "What does 'free updates' mean exactly?",
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
+    {
+        id: 'faq-5',
+        name: 'Do you offer a free trial?',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
+    {
+        id: 'faq-6',
+        name: 'How can I request support?',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    },
 ];
 
 const pricingdata = [
-  {
-    name: 'Basic',
-    description: 'For development, staging, and small production projects.',
-    periodicity: '/month',
-    price: '$10',
-    action: 'Buy Now',
-    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
-  },
-  {
-    name: 'Pro',
-    description: 'For high-scale and mission critical projects.',
-    isFlagged: true,
-    periodicity: '/month',
-    price: '$25',
-    action: 'Buy Now',
-    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
-  },
-  {
-    name: 'Team',
-    description: 'For teams with more security, support, and performance needs.',
-    periodicity: '',
-    price: 'Custom',
-    action: 'Buy Now',
-    features: [
-      'Unlimited Seats',
-      'Unlimited Projects',
-      'Lifetime access',
-      'Email and Chat Support',
-      'High-Performance',
-      'Free updates',
-    ],
-  },
+    {
+        name: 'Basic',
+        description: 'For development, staging, and small production projects.',
+        periodicity: '/month',
+        price: '$10',
+        action: 'Buy Now',
+        features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+    },
+    {
+        name: 'Pro',
+        description: 'For high-scale and mission critical projects.',
+        isFlagged: true,
+        periodicity: '/month',
+        price: '$25',
+        action: 'Buy Now',
+        features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
+    },
+    {
+        name: 'Team',
+        description: 'For teams with more security, support, and performance needs.',
+        periodicity: '',
+        price: 'Custom',
+        action: 'Buy Now',
+        features: [
+            'Unlimited Seats',
+            'Unlimited Projects',
+            'Lifetime access',
+            'Email and Chat Support',
+            'High-Performance',
+            'Free updates',
+        ],
+    },
 ];
 
 const testimonialsdata = [
-  {
-    name: 'Rebecca Hayes',
-    subtitle: 'Designer',
-    imageUrl: '/assets/testimonial-1.webp',
-    description:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-  },
-  {
-    name: 'Rosa Spencer',
-    subtitle: 'Team Leader',
-    imageUrl: '/assets/testimonial-2.webp',
-    description:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-  },
-  {
-    name: 'Christina Upton',
-    subtitle: 'Manager',
-    imageUrl: '/assets/testimonial-3.webp',
-    description:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-  },
+    {
+        name: 'Rebecca Hayes',
+        subtitle: 'Designer',
+        imageUrl: '/assets/testimonial-1.webp',
+        description:
+            '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+    },
+    {
+        name: 'Rosa Spencer',
+        subtitle: 'Team Leader',
+        imageUrl: '/assets/testimonial-2.webp',
+        description:
+            '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+    },
+    {
+        name: 'Christina Upton',
+        subtitle: 'Manager',
+        imageUrl: '/assets/testimonial-3.webp',
+        description:
+            '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+    },
 ];
 ---
 
 <Layout
-  description="Find the pricing plan that best fits your needs. Plans include seats, projects, support and more"
-  title="Pricing · Stone"
+        description="Find the pricing plan that best fits your needs. Plans include seats, projects, support and more"
+        title="Pricing · Stone"
 >
 
-  <ScrollAnimationWrapper>
-    <Heading title="Pricing" description="Choose the plan that best suits your needs." />
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <CardTable data={pricingdata} />
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Accordion title="Frequently asked questions" data={questions}/>
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Testimonials title="Trusted by the largest companies in the world" data={testimonialsdata}/>
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Jumbotron title="Still have questions?" description="Please describe your case to receive the most accurate advice." btn_name="Contact Us" btn_href="/contact"/>
-  </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Heading title="Pricing" description="Choose the plan that best suits your needs."/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <CardTable data={pricingdata}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Accordion title="Frequently asked questions" data={questions}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Testimonials title="Trusted by the largest companies in the world" data={testimonialsdata}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Jumbotron title="Still have questions?"
+                   description="Please describe your case to receive the most accurate advice." btn_name="Contact Us"
+                   btn_href="/contact"/>
+    </ScrollAnimationWrapper>
 
 </Layout>

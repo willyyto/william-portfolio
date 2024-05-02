@@ -4,27 +4,30 @@ import Accordion from '@components/common/Accordion.astro';
 import Hero from '@components/home/Hero.astro';
 import Cards from '@components/common/Cards.astro';
 import Jumbotron from '@components/common/Jumbotron.astro';
+import Footer from '@components/common/Footer.astro';
 
 import Layout from '@layouts/Layout.astro';
 import {data} from '@data';
 import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
-
 ---
 
 <Layout description="" title={"Home · " + data.name}>
-  <ScrollAnimationWrapper>
-    <Hero description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." data={data} btn_name="Download CV" btn_href="/pricing"/>
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Cards title="Transferrable Skills" data={data.transferableskills} />
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Accordion title="Expertise" data={data.expertise}/>
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Description title="About" data={data.about}/>
-  </ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Jumbotron  title="Contacts" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." btn_name="Contact Me" btn_href="/contact"/>
-  </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Hero description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+              data={data} btn_name="Download CV" btn_href="/pricing"/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Cards title="Transferrable Skills" data={data.transferableskills}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Accordion title="Expertise" data={data.expertise}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Description title="About" data={data.about}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Jumbotron title="Contacts"
+                   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+                   btn_name="Contact Me" btn_href="/contact"/>
+    </ScrollAnimationWrapper>
 </Layout>

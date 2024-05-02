@@ -1,85 +1,154 @@
 ---
 import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
-import { ViewTransitions } from 'astro:transitions';
+import {ViewTransitions} from 'astro:transitions';
 import Footer from '@components/common/Footer.astro';
 import Header from '@components/common/Header.astro';
 import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
 interface Props {
-  description: string;
-  title: string;
+    description: string;
+    title: string;
 }
 
-const { description, title } = Astro.props;
+const {description, title} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="description" content={description}/>
     <title>{title}</title>
-    <ViewTransitions />
-  </head>
-  <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
-  >
-    <Header />
-    
-    <main>
-      <slot />
-    </main>
-    
-    <ScrollAnimationWrapper>
-      <Footer />
-    </ScrollAnimationWrapper>
+    <ViewTransitions/>
+</head>
+<body
+        class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200"
+>
+<Header/>
 
-    <style is:global>
-      [x-cloak] {
+<main>
+    <slot/>
+</main>
+
+<ScrollAnimationWrapper>
+    <Footer/>
+</ScrollAnimationWrapper>
+
+<style is:global>
+    [x-cloak] {
         display: none !important;
-      }
+    }
 
-    </style>
-    <script>
-      import Alpine from 'alpinejs';
-      import collapse from '@alpinejs/collapse';
+    .typewriter-text {
+        min-height: 2em;
+        overflow: hidden;
+        padding-right: 0.5em;
+        animation: blink-cursor 0.75s step-end infinite;
+    }
 
-      Alpine.plugin(collapse);
+    .typewriter-text-sm {
+        min-height: 1.5em;
+        overflow: hidden;
+        padding-right: 0.5em;
+        animation: blink-cursor 0.75s step-end infinite;
+    }
 
-      Alpine.store('theme', {
+    @keyframes blink-cursor {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: inherit;
+        }
+    }
+
+</style>
+<script>
+    import Alpine from 'alpinejs';
+    import collapse from '@alpinejs/collapse';
+
+    Alpine.plugin(collapse);
+
+    Alpine.store('theme', {
         init() {
-          this.isDark = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              return true;
-            }
-            return false;
-          })();
+            this.isDark = (() => {
+                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                    return localStorage.getItem('theme') === 'dark';
+                }
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return true;
+                }
+                return false;
+            })();
         },
 
         isDark: false,
 
         toggle() {
-          this.isDark = !this.isDark;
-          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+            this.isDark = !this.isDark;
+            localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
         },
-      });
+    });
 
-      window.Alpine = Alpine;
-      Alpine.start();
-    </script>
-    <script>
-      window.onbeforeunload = function () {
+    window.Alpine = Alpine;
+    Alpine.start();
+</script>
+
+<script client:only type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+        const typewriters = document.querySelectorAll('.typewriter');
+        typewriters.forEach(initTypewriter);
+    });
+
+    function initTypewriter(typewriter) {
+        const texts = ["I am a software engineer", "I am a full-stack developer", "I am a data analyst"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            typewriter.textContent = letter;
+            if (letter.length === currentText.length) {
+                setTimeout(() => erase(), 2000);
+            } else {
+                setTimeout(type, 120);
+            }
+        }
+
+        function erase() {
+            letter = currentText.slice(0, --index);
+            typewriter.textContent = letter;
+
+            if (letter.length === 0) {
+                count++;
+                index = 0;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(erase, 60);
+            }
+        }
+
+        setTimeout(type, 1000); // Delay the start to simulate initial typing delay
+    }
+</script>
+
+<script client:only type="module">
+    window.onbeforeunload = function () {
         window.scrollTo(0, 0);
-      }
-      </script>
-  </body>
+    }
+</script>
+</body>
 </html>

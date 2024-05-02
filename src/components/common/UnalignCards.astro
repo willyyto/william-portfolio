@@ -1,31 +1,31 @@
 ---
-import { type IDefaultComponentProps } from "@types";
-const { title, data } = Astro.props as IDefaultComponentProps;
+import {type IDefaultComponentProps} from "@types";
+const {title, data} = Astro.props as IDefaultComponentProps;
 ---
 
 <section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{title}</h2>
-      <div class="grid gap-8 lg:grid-cols-2">
-        {
-          data.map((cards: any, index: number) => (
-            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
-              {cards.map((card: any) => (
-                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-                  <p class="text-sm">{card.id}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-medium">{card.name}</h3>
-                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="flex flex-col gap-8 lg:gap-12">
+            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{title}</h2>
+            <div class="grid gap-8 lg:grid-cols-2">
+                {
+                    data.map((cards: any, index: number) => (
+                            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+                                {cards.map((card: any) => (
+                                        <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                                            <p class="text-sm">{card.id}</p>
+                                            <div class="flex flex-col gap-4">
+                                                <h3 class="text-xl font-medium">{card.name}</h3>
+                                                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                                                    {card.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                ))}
+                            </div>
+                    ))
+                }
             </div>
-          ))
-        }
-      </div>
+        </div>
     </div>
-  </div>
 </section>

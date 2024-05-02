@@ -3,47 +3,48 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  darkMode: 'class',
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  theme: {
-    colors: {
-      current: 'currentColor',
-      transparent: 'transparent',
-      white: '#ffffff',
-      primary: colors.stone,
-      secondary: '#8356ff',
-      secondaryhover: '#6837cc',
-    },
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-    },
-    fontSize: {
-      xs: ['0.75rem', '1rem'],
-      sm: ['0.875rem', '1.25rem'],
-      base: ['1rem', '1.75rem'],
-      lg: ['1.125rem', '2rem'],
-      xl: ['1.25rem', '2.125rem'],
-      '2xl': ['1.5rem', '2rem'],
-      '3xl': ['1.875rem', '2.375rem'],
-      '4xl': ['2.25rem', '2.75rem'],
-      '5xl': ['3rem', '3.5rem'],
-      '6xl': ['3.75rem', '4.25rem'],
-    },
-    extend: {
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
+    darkMode: 'class',
+    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+    theme: {
+        colors: {
+            current: 'currentColor',
+            transparent: 'transparent',
+            white: '#ffffff',
+            primary: colors.stone,
+            secondary: '#8356ff',
+            secondaryhover: '#6837cc',
+            locationblue: "#33d2ff",
         },
-      },
-      animation: {
-        fadeIn: 'fadeIn 1s ease-out',
-      },
-      transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // This is the default smooth timing
-        'smoother': 'cubic-bezier(0.25, 0.8, 0.25, 1)', // Custom smoother transition
-      },
-      
+        fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+        },
+        fontSize: {
+            xs: ['0.75rem', '1rem'],
+            sm: ['0.875rem', '1.25rem'],
+            base: ['1rem', '1.75rem'],
+            lg: ['1.125rem', '2rem'],
+            xl: ['1.25rem', '2.125rem'],
+            '2xl': ['1.5rem', '2rem'],
+            '3xl': ['1.875rem', '2.375rem'],
+            '4xl': ['2.25rem', '2.75rem'],
+            '5xl': ['3rem', '3.5rem'],
+            '6xl': ['3.75rem', '4.25rem'],
+        },
+        extend: {
+            keyframes: {
+                fadeIn: {
+                    '0%': {opacity: 0},
+                    '100%': {opacity: 1},
+                },
+            },
+            animation: {
+                fadeIn: 'fadeIn 1s ease-out',
+            },
+            transitionTimingFunction: {
+                'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // This is the default smooth timing
+                'smoother': 'cubic-bezier(0.25, 0.8, 0.25, 1)', // Custom smoother transition
+            },
+
+        },
     },
-  },
 };

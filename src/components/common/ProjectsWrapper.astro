@@ -1,14 +1,14 @@
 ---
-import { type IProjects } from "@types";
+import {type IProjects} from "@types";
 import ProjectCard from "./ProjectCard.astro";
-const { projects } = Astro.props as IProjects;
-
+const {projects} = Astro.props as IProjects;
 ---
 
-<section class="py-0 sm:py-0" >
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-0  lg:max-w-7xl lg:px-8">
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 my-16">
-      {projects.map((project) => <ProjectCard projectDetail={project} />)}
+<section class="py-0 sm:py-0">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-0  lg:max-w-7xl lg:px-8">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-4 my-16">
+            {projects.map((project) =>
+                    <ProjectCard projectDetail={project}/>)}
+        </div>
     </div>
-  </div>
 </section>

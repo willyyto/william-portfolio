@@ -8,58 +8,72 @@ import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.as
 import {data} from '@data';
 
 const carddata = [
-  [
-    {
-      "id": "01",
-      "name": "Expertise in AI and Machine Learning",
-      "description": "Demonstrated deep knowledge in AI and ML through the development of a real-time face mask detection system using cutting-edge technologies like CNN and YOLO algorithms. This project showcases my ability to apply complex AI models to solve pressing public health issues, making me a valuable asset in technology-driven roles."
-    },
-    {
-      "id": "02",
-      "name": "Problem-solving and Innovation",
-      "description": "Addressed key challenges in the implementation of AI technologies in public spaces, navigating through technical, societal, and ethical barriers. My innovative approach to utilizing AI for enhancing public safety illustrates my capability to tackle complex problems creatively and effectively."
-    }
-  ],
-  [
-    {
-      "id": "03",
-      "name": "Technical Proficiency and Adaptability",
-      "description": "Skilled in adapting and integrating sophisticated object detection algorithms to enhance system performance under varying operational conditions. This adaptability indicates my competence in leveraging technology to optimize outcomes, suitable for dynamic and challenging environments."
-    },
-    {
-      "id": "04",
-      "name": "Ethical AI Development",
-      "description": "Committed to the ethical implications of AI deployments, focusing on privacy and legal considerations while implementing AI solutions. My awareness and proactive management of these aspects demonstrate my dedication to responsible AI development and compliance."
-    }
-  ]
+    [
+        {
+            "id": "01",
+            "name": "Expertise in AI and Machine Learning",
+            "description": "Demonstrated deep knowledge in AI and ML through the development of a real-time face mask detection system using cutting-edge technologies like CNN and YOLO algorithms. This project showcases my ability to apply complex AI models to solve pressing public health issues, making me a valuable asset in technology-driven roles."
+        },
+        {
+            "id": "02",
+            "name": "Problem-solving and Innovation",
+            "description": "Addressed key challenges in the implementation of AI technologies in public spaces, navigating through technical, societal, and ethical barriers. My innovative approach to utilizing AI for enhancing public safety illustrates my capability to tackle complex problems creatively and effectively."
+        }
+    ],
+    [
+        {
+            "id": "03",
+            "name": "Technical Proficiency and Adaptability",
+            "description": "Skilled in adapting and integrating sophisticated object detection algorithms to enhance system performance under varying operational conditions. This adaptability indicates my competence in leveraging technology to optimize outcomes, suitable for dynamic and challenging environments."
+        },
+        {
+            "id": "04",
+            "name": "Ethical AI Development",
+            "description": "Committed to the ethical implications of AI deployments, focusing on privacy and legal considerations while implementing AI solutions. My awareness and proactive management of these aspects demonstrate my dedication to responsible AI development and compliance."
+        }
+    ]
 ]
 
 
 const teamdata = [
-  {
-    name: 'Floyd Lowe',
-    imageUrl: '/assets/team-1.webp',
-    description: 'Senior Designer',
-  },
-  {
-    name: 'Emma Dorsey',
-    imageUrl: '/assets/team-2.webp',
-    description: 'Principal Designer',
-  },
-  {
-    name: 'Emily Mitchell',
-    imageUrl: '/assets/team-3.webp',
-    description: 'Senior Developer',
-  },
+    {
+        name: 'Floyd Lowe',
+        imageUrl: '/assets/team-1.webp',
+        description: 'Senior Designer',
+    },
+    {
+        name: 'Emma Dorsey',
+        imageUrl: '/assets/team-2.webp',
+        description: 'Principal Designer',
+    },
+    {
+        name: 'Emily Mitchell',
+        imageUrl: '/assets/team-3.webp',
+        description: 'Senior Developer',
+    },
 ];
 ---
 
 <Layout description="" title={data.name + "- Research"}>
-  <ScrollAnimationWrapper><Heading title="Research" description="Current academic research papers that I have written."/></ScrollAnimationWrapper>
-  <ScrollAnimationWrapper><ContentImageStat title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision" data={data.research[0]} flipOrder={false}/></ScrollAnimationWrapper>
-  <ScrollAnimationWrapper><ContentImageStat title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision" data={data.research[1]} flipOrder={true}/></ScrollAnimationWrapper>
-  <ScrollAnimationWrapper><UnalignCards title="Research and Skills Overview" data={carddata} /></ScrollAnimationWrapper>
-  <ScrollAnimationWrapper>
-    <Jumbotron  title="Contacts" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." btn_name="Contact Me" btn_href="/contact"/>
-  </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Heading title="Research" description="Scholarly Contributions and Publications"/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <ContentImageStat
+                title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision"
+                data={data.research[0]} flipOrder={false}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <ContentImageStat
+                title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision"
+                data={data.research[1]} flipOrder={true}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <UnalignCards title="Key Achievements and Capabilities" data={carddata}/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Jumbotron title="Contacts"
+                   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+                   btn_name="Contact Me" btn_href="/contact"/>
+    </ScrollAnimationWrapper>
 </Layout>

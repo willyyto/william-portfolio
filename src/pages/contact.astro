@@ -1,13 +1,19 @@
 ---
 import ContactForm from '@components/contact/ContactForm.astro';
 import ContactInfo from '@components/contact/ContactInfo.astro';
+import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
 import Layout from '@layouts/Layout.astro';
 import {data} from '@data';
 ---
 
 <Layout
-  description="" title={"Contact Me · " + data.name}
+        description="" title={"Contact Me · " + data.name}
 >
-  <ContactInfo />
-  <ContactForm title="Let’s get in touch" description ="Send me a message via the contact form. I will respond within 1-2 business days."/>
+    <ScrollAnimationWrapper>
+        <ContactInfo/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <ContactForm title="Let’s get in touch"
+                     description="Send me a message via the contact form. I will respond within 1-2 business days."/>
+    </ScrollAnimationWrapper>
 </Layout>

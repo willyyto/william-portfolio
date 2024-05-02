@@ -1,0 +1,20 @@
+---
+import Heading from '@components/common/Heading.astro';
+import AcademicExperience from '@components/experience/AcademicExperience.astro';
+import Experience from '@components/experience/Experience.astro';
+import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
+import Layout from '@layouts/Layout.astro';
+import {data} from '@data';
+
+const education = data.education;
+---
+
+<Layout
+        description="" title={"Experiences · " + data.name}
+>
+    <ScrollAnimationWrapper>
+        <Heading title="Experiences" description=""/>
+    </ScrollAnimationWrapper>
+    <AcademicExperience title="Academic Experience" data={education}/>
+    <Experience title="Work Experience" data={data.experience}/>
+</Layout>

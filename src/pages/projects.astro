@@ -15,11 +15,19 @@ const projectsdata = data.projects.map((project) => project);
 
 <Layout description="" title={"Projects · " + data.name}
 >
-    <ScrollAnimationWrapper><Heading title="Projects" description=""/></ScrollAnimationWrapper>
-    <ScrollAnimationWrapper><VideoPlayer /></ScrollAnimationWrapper>
-    <ScrollAnimationWrapper><ProjectsWrapper projects={projectsdata} /></ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Heading title="Projects" description="Project Highlights"/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <VideoPlayer/>
+    </ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <ProjectsWrapper projects={projectsdata}/>
+    </ScrollAnimationWrapper>
 
     <ScrollAnimationWrapper>
-      <Jumbotron  title="Contacts" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." btn_name="Contact Me" btn_href="/contact"/>
+        <Jumbotron title="Contacts"
+                   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+                   btn_name="Contact Me" btn_href="/contact"/>
     </ScrollAnimationWrapper>
 </Layout>

@@ -1,49 +1,117 @@
 ---
-import { type IDefaultComponentProps } from "@types";
-const { description, btn_name, btn_href, data } = Astro.props as IDefaultComponentProps;
+import {type IDefaultComponentProps} from "@types";
+const {description, btn_name, btn_href, data} = Astro.props as IDefaultComponentProps;
 ---
 
-<section class="py-16 sm:py-20" >
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col lg:flex-row gap-16">
-      <div class="flex flex-col items-start gap-8 sm:gap-10 lg:flex-grow">
-        <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
-          <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
-            Hi, I'm <span class="text-primary-700 dark:text-primary-300">{data.name}</span>
-          </h1>
-          <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-            {description}
-          </p>
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16">
+            <div class="flex flex-col items-start gap-8 sm:gap-10 lg:flex-grow">
+                <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
+                    <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+                        Hi, I'm <span class="text-primary-700 dark:text-primary-300">{data.name}</span>
+                    </h1>
+
+                    <p class="typewriter typewriter-text text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl border-r-2 border-transparent dark:border-white">
+                        <!-- Dynamic typewriter text will appear here -->
+                    </p>
+
+                </div>
+                <a
+                        href={btn_href}
+                        class="bg-secondary hover:bg-secondaryhover focus-visible:outline-secondaryhover inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                    {btn_name}
+                </a>
+            </div>
+            <div class="flex flex-col items-center flex-shrink-0 lg:items-start">
+                <img
+                        src={data.pictureUrl}
+                        class="w-400 h-400 rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+                        alt={data.name}
+                />
+            </div>
         </div>
-        <a
-          href={btn_href}
-          class="bg-secondary hover:bg-secondaryhover focus-visible:outline-secondaryhover inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          {btn_name}
-        </a>
-      </div>
-      <div class="flex flex-col items-center flex-shrink-0 lg:items-start">
-        <img
-          src={data.pictureUrl}
-          class="w-400 h-400 rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
-          alt={data.name}
-        />
-      </div>
     </div>
-  </div>
 </section>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const typewriters = document.querySelectorAll('.typewriter');
+        typewriters.forEach(initTypewriter);
+    });
+
+    function initTypewriter(typewriter) {
+        const texts = ["I am a software engineer", "I am a full-stack developer", "I am a data analyst"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            typewriter.textContent = letter;
+            if (letter.length === currentText.length) {
+                setTimeout(() => erase(), 2000);
+            } else {
+                setTimeout(type, 120);
+            }
+        }
+
+        function erase() {
+            letter = currentText.slice(0, --index);
+            typewriter.textContent = letter;
+
+            if (letter.length === 0) {
+                count++;
+                index = 0;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(erase, 60);
+            }
+        }
+
+        setTimeout(type, 1000); // Delay the start to simulate initial typing delay
+    }
+</script>
+
 <style>
-  img:hover::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-img:hover::after {
-    opacity: 1;
-}
+    img:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    img:hover::after {
+        opacity: 1;
+    }
+
+    .typewriter-text {
+        min-height: 2em;
+        overflow: hidden;
+        padding-right: 0.5em;
+        animation: blink-cursor 0.75s step-end infinite;
+    }
+
+    @keyframes blink-cursor {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: inherit;
+        }
+    }
+
 </style>
