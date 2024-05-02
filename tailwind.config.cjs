@@ -12,6 +12,7 @@ module.exports = {
       white: '#ffffff',
       primary: colors.stone,
       secondary: '#8356ff',
+      secondaryhover: '#6837cc',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

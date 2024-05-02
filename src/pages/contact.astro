@@ -1,13 +1,13 @@
 ---
-import ContactForm from '../components/contact/ContactForm.astro';
-import ContactInfo from '../components/contact/ContactInfo.astro';
-import Layout from '../layouts/Layout.astro';
+import ContactForm from '@components/contact/ContactForm.astro';
+import ContactInfo from '@components/contact/ContactInfo.astro';
+import Layout from '@layouts/Layout.astro';
+import {data} from '@data';
 ---
 
 <Layout
-  description="Contact our team to learn more about how we can help you."
-  title="Contact · Stone"
+  description="" title={"Contact Me · " + data.name}
 >
   <ContactInfo />
-  <ContactForm />
+  <ContactForm title="Let’s get in touch" description ="Send me a message via the contact form. I will respond within 1-2 business days."/>
 </Layout>

@@ -1,0 +1,22 @@
+---
+import Description from '@components/common/Description.astro';
+import ProjectsWrapper from '@components/common/ProjectsWrapper.astro';
+import Heading from '@components/common/Heading.astro';
+import Jumbotron from '@components/common/Jumbotron.astro';
+
+import Layout from '@layouts/Layout.astro';
+import {data} from '@data';
+import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
+
+const projectsdata = data.projects.map((project) => project);
+
+---
+
+<Layout description="" title={"Projects · " + data.name}
+>
+    <ScrollAnimationWrapper><Heading title="Projects" description=""/></ScrollAnimationWrapper>
+    <ScrollAnimationWrapper><ProjectsWrapper projects={projectsdata} /></ScrollAnimationWrapper>
+    <ScrollAnimationWrapper>
+        <Jumbotron  title="Contacts" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." btn_name="Contact Me" btn_href="/contact"/>
+      </ScrollAnimationWrapper>
+</Layout>

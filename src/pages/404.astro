@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
+import {data} from '@data';
 ---
 
 <Layout
-  description="Page not found. Please check the URL in the address bar and try again."
-  title="Not found · Stone"
+description="" title={"Not Found · " + data.name}
 >
   <section class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">

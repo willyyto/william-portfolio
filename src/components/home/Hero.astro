@@ -1,5 +1,6 @@
 ---
-import { data } from "@data";
+import { type IDefaultComponentProps } from "@types";
+const { description, btn_name, btn_href, data } = Astro.props as IDefaultComponentProps;
 ---
 
 <section class="py-16 sm:py-20" >
@@ -11,19 +12,19 @@ import { data } from "@data";
             Hi, I'm <span class="text-primary-700 dark:text-primary-300">{data.name}</span>
           </h1>
           <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            {description}
           </p>
         </div>
         <a
-          href="/pricing"
-          class="bg-secondary dark:bg-secondary hover:bg-secondary-700 dark:hover:bg-secondary-300 focus-visible:outline-secondary-600 dark:focus-visible:outline-secondary-400 dark:text-white-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          href={btn_href}
+          class="bg-secondary hover:bg-secondaryhover focus-visible:outline-secondaryhover inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
         >
-          Download CV
+          {btn_name}
         </a>
       </div>
       <div class="flex flex-col items-center flex-shrink-0 lg:items-start">
         <img
-          src="/assets/portfolio-picture.png"
+          src={data.pictureUrl}
           class="w-400 h-400 rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
           alt={data.name}
         />
