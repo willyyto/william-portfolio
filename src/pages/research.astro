@@ -1,7 +1,7 @@
 ---
 import Heading from '@components/common/Heading.astro';
 import ContentImageStat from '@components/common/ContentImageStat.astro';
-import ImageCards from '@components/common/ImageCards.astro';
+import Jumbotron from '@components/common/Jumbotron.astro';
 import UnalignCards from '@components/common/UnalignCards.astro';
 import Layout from '@layouts/Layout.astro';
 import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
@@ -10,60 +10,30 @@ import {data} from '@data';
 const carddata = [
   [
     {
-      id: '01',
-      name: 'Excellence',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "id": "01",
+      "name": "Expertise in AI and Machine Learning",
+      "description": "Demonstrated deep knowledge in AI and ML through the development of a real-time face mask detection system using cutting-edge technologies like CNN and YOLO algorithms. This project showcases my ability to apply complex AI models to solve pressing public health issues, making me a valuable asset in technology-driven roles."
     },
     {
-      id: '02',
-      name: 'Innovation',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
+      "id": "02",
+      "name": "Problem-solving and Innovation",
+      "description": "Addressed key challenges in the implementation of AI technologies in public spaces, navigating through technical, societal, and ethical barriers. My innovative approach to utilizing AI for enhancing public safety illustrates my capability to tackle complex problems creatively and effectively."
+    }
   ],
   [
     {
-      id: '03',
-      name: 'Teamwork',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "id": "03",
+      "name": "Technical Proficiency and Adaptability",
+      "description": "Skilled in adapting and integrating sophisticated object detection algorithms to enhance system performance under varying operational conditions. This adaptability indicates my competence in leveraging technology to optimize outcomes, suitable for dynamic and challenging environments."
     },
     {
-      id: '04',
-      name: 'Respect',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
-  ],
-];
-
-const missiondata = {
-  imageUrl: "/assets/face-mask-detection.jpg",
-  description: ["My research investigates the implementation of face mask detection systems using artificial intelligence (AI) and machine learning (ML) to mitigate the transmission of COVID-19, a virus that has significantly impacted global health and economies. The pandemic, responsible for over 603 million infections and nearly 7 million deaths, necessitates innovative solutions for public health safety.",
-  "This project explores the technological and societal barriers hindering the adoption of face mask detection technologies. It delves into various object detection algorithms capable of identifying the presence of face masks on individuals efficiently and accurately. The focus is primarily on convolutional neural networks (CNN) and You Only Look Once (YOLO) algorithms, which are favored for their speed and minimal resource utilization.",
-  "Additionally, the research addresses the challenges posed by dense populations in enforcing mask mandates, suggesting that AI and ML could significantly aid in automating and scaling enforcement efforts. By examining the feasibility and implications of deploying these technologies in public spaces, this paper contributes to the ongoing discourse on public health and safety technologies during pandemics, highlighting the critical balance between technological advancement and privacy concerns.",
-  ],
-  stats: [
-  {
-    "name": "Global Impact",
-    "value": "603 million cases"
-  },
-  {
-    "name": "Fatalities",
-    "value": "7 million deaths"
-  },
-  {
-    "name": "Detection Accuracy",
-    "value": "up to 98%"
-  },
-  {
-    "name": "Processing Speed",
-    "value": "milliseconds"
-  }
+      "id": "04",
+      "name": "Ethical AI Development",
+      "description": "Committed to the ethical implications of AI deployments, focusing on privacy and legal considerations while implementing AI solutions. My awareness and proactive management of these aspects demonstrate my dedication to responsible AI development and compliance."
+    }
+  ]
 ]
 
-};
 
 const teamdata = [
   {
@@ -86,5 +56,10 @@ const teamdata = [
 
 <Layout description="" title={data.name + "- Research"}>
   <ScrollAnimationWrapper><Heading title="Research" description="Current academic research papers that I have written."/></ScrollAnimationWrapper>
-  <ScrollAnimationWrapper><ContentImageStat title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision" data={missiondata}/></ScrollAnimationWrapper>
+  <ScrollAnimationWrapper><ContentImageStat title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision" data={data.research[0]} flipOrder={false}/></ScrollAnimationWrapper>
+  <ScrollAnimationWrapper><ContentImageStat title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision" data={data.research[1]} flipOrder={true}/></ScrollAnimationWrapper>
+  <ScrollAnimationWrapper><UnalignCards title="Research and Skills Overview" data={carddata} /></ScrollAnimationWrapper>
+  <ScrollAnimationWrapper>
+    <Jumbotron  title="Contacts" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione." btn_name="Contact Me" btn_href="/contact"/>
+  </ScrollAnimationWrapper>
 </Layout>
