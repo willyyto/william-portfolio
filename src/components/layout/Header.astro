@@ -1,26 +1,8 @@
 ---
-const links = [
-  {
-    ref: '01',
-    name: 'Home',
-    href: '/',
-  },
-  {
-    ref: '02',
-    name: 'About',
-    href: '/about',
-  },
-  {
-    ref: '03',
-    name: 'Pricing',
-    href: '/pricing',
-  },
-  {
-    ref: '04',
-    name: 'Contact',
-    href: '/contact',
-  },
-];
+import { data } from "@data";
+import { createLogo } from "@utils";
+
+const links = data.header.links;
 ---
 
 <header
@@ -35,16 +17,9 @@ const links = [
     <div class="flex">
       <a
         href="/"
-        class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
+        class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2 text-2xl dark:text-light font-semibold dark:font-semibold font-outfit"
       >
-        <span class="sr-only">Stone</span>
-        <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        />
+      <b class="text-secondary">|</b> {createLogo(data.name)}
       </a>
     </div>
 
@@ -141,8 +116,7 @@ const links = [
         <p
           class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
         >
-          <span class="font-medium">Stone</span> is a premium Astro theme specially designed for
-          Business, Marketing, SaaS and Startup websites.
+        Hi, I am <span class="font-medium">William</span>. It’s my career objective to constantly learn and improve upon my understanding within the technological space in order to solve challenging problems that I may encounter in the near future.
         </p>
       </div>
 
@@ -156,7 +130,7 @@ const links = [
             >
               <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                 <div class="flex items-center gap-6">
-                  <span class="text-xs">{link.ref}</span>
+                  <span class="text-xs text-secondary">{link.ref}</span>
                   <span class="group-hover:underline">{link.name}</span>
                 </div>
                 <svg

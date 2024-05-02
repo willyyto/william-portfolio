@@ -11,6 +11,7 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       primary: colors.stone,
+      secondary: '#8356ff',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -26,6 +27,22 @@ module.exports = {
       '4xl': ['2.25rem', '2.75rem'],
       '5xl': ['3rem', '3.5rem'],
       '6xl': ['3.75rem', '4.25rem'],
+    },
+    extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-out',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // This is the default smooth timing
+        'smoother': 'cubic-bezier(0.25, 0.8, 0.25, 1)', // Custom smoother transition
+      },
+      
     },
   },
 };

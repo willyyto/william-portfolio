@@ -4,7 +4,7 @@ import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
-
+import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
 interface Props {
   description: string;
   title: string;
@@ -34,11 +34,12 @@ const { description, title } = Astro.props;
     <main>
       <slot />
     </main>
-    <Footer />
+    <ScrollAnimationWrapper><Footer /></ScrollAnimationWrapper>
     <style is:global>
       [x-cloak] {
         display: none !important;
       }
+
     </style>
     <script>
       import Alpine from 'alpinejs';
@@ -70,5 +71,10 @@ const { description, title } = Astro.props;
       window.Alpine = Alpine;
       Alpine.start();
     </script>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+      </script>
   </body>
 </html>
