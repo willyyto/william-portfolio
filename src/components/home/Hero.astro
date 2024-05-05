@@ -35,52 +35,6 @@ const {description, btn_name, btn_href, data} = Astro.props as IDefaultComponent
     </div>
 </section>
 
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const typewriters = document.querySelectorAll('.typewriter');
-        typewriters.forEach(initTypewriter);
-    });
-
-    function initTypewriter(typewriter) {
-        const texts = ["I am a software engineer", "I am a full-stack developer", "I am a data analyst"];
-        let count = 0;
-        let index = 0;
-        let currentText = '';
-        let letter = '';
-
-        function type() {
-            if (count === texts.length) {
-                count = 0;
-            }
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
-
-            typewriter.textContent = letter;
-            if (letter.length === currentText.length) {
-                setTimeout(() => erase(), 2000);
-            } else {
-                setTimeout(type, 120);
-            }
-        }
-
-        function erase() {
-            letter = currentText.slice(0, --index);
-            typewriter.textContent = letter;
-
-            if (letter.length === 0) {
-                count++;
-                index = 0;
-                setTimeout(type, 1000);
-            } else {
-                setTimeout(erase, 60);
-            }
-        }
-
-        setTimeout(type, 1000); // Delay the start to simulate initial typing delay
-    }
-</script>
-
 <style>
     img:hover::after {
         content: '';
