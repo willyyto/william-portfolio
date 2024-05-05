@@ -6,7 +6,7 @@ import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://willyyto.github.io',
+    site: 'https://www.williamto.com',
     base: 'william-portfolio',
     integrations: [tailwind(), compress(),
         sitemap({
