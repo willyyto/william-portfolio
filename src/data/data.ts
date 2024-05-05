@@ -253,11 +253,11 @@ export const data = {
       liveUrl: 'https://bfgloans.com.au/',
     },
     {
-      title: 'Personal Portfolio',
+      title: 'Old Personal Portfolio',
       isFeatured: true,
       thumbnail: '/assets/astro-portfolio.png',
-      githubUrl: 'https://github.com/willyyto/william-portfolio',
-      liveUrl: 'https://www.williamto.com',
+      githubUrl: 'https://github.com/willyyto/william-portfolio-old',
+      liveUrl: 'https://willyyto.github.io/william-portfolio-old',
     },
     {
       title: 'Cinemeow',

@@ -7,7 +7,6 @@ import robotsTxt from 'astro-robots-txt';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://www.williamto.com',
-    base: 'william-portfolio',
     integrations: [tailwind(), compress(),
         sitemap({
           changefreq: "weekly",
