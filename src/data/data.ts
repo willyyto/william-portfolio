@@ -209,39 +209,39 @@ export const data = {
   expertise: [
     {
       id: 'expertise-1',
-      name: 'Digital Experience Platforms',
+      name: 'Full-Stack Development',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Proficient in leveraging modern web technologies including React, Next.js, Angular, and Svelte to create scalable and responsive web applications. Demonstrated capability in handling both frontend aesthetics and backend functionality, ensuring comprehensive software solutions.',
     },
     {
       id: 'expertise-2',
-      name: 'Web & Mobile Development',
+      name: 'Cloud Computing & Migration',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Experienced in cloud infrastructure management using Azure and AWS, focusing on enhancing scalability and operational efficiency. Successfully led a critical cloud migration project, demonstrating expertise in cloud architecture and deployment strategies.',
     },
     {
       id: 'expertise-3',
-      name: 'Serverless Computing Platforms',
+      name: 'Advanced SQL and Data Management',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Expert in SQL database management, focusing on complex data analysis and optimization of healthcare data. Developed and optimized SQL views to enhance system performance and reporting capabilities, significantly improving data access and analytics processes.',
     },
     {
       id: 'expertise-4',
-      name: 'Build & Test Automation Tools',
+      name: 'Data Security & System Architecture',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Engineered robust security architectures and developed secure web applications using .NET Framework and Active Directory. Improved system security and performance, ensuring high standards of data protection and access control.',
     },
     {
       id: 'expertise-5',
-      name: 'Artificial Intelligence',
+      name: 'Agile Development Practices',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Adept at facilitating agile development processes within cross-functional teams. Enhanced project agility and team productivity by adhering to stringent design and architectural standards, contributing to the timely delivery of high-quality software solutions.',
     },
     {
       id: 'expertise-6',
-      name: 'Full project support',
+      name: 'Technical Documentation & Testing',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Produced and maintained comprehensive technical documentation to ensure clarity and consistency across development phases. Played a key role in the end-to-end testing and deployment of applications, ensuring seamless transitions and operational excellence.',
     },
   ],
   projects: [
