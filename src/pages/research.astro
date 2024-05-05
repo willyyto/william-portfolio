@@ -34,46 +34,24 @@ const carddata = [
     ]
 ]
 
-
-const teamdata = [
-    {
-        name: 'Floyd Lowe',
-        imageUrl: '/assets/team-1.webp',
-        description: 'Senior Designer',
-    },
-    {
-        name: 'Emma Dorsey',
-        imageUrl: '/assets/team-2.webp',
-        description: 'Principal Designer',
-    },
-    {
-        name: 'Emily Mitchell',
-        imageUrl: '/assets/team-3.webp',
-        description: 'Senior Developer',
-    },
-];
 ---
 
-<Layout description="" title={data.name + "- Research"}>
+<Layout description="" title={"Research · " + data.name}>
     <ScrollAnimationWrapper>
         <Heading title="Research" description="Scholarly Contributions and Publications"/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
-        <ContentImageStat
-                title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision"
-                data={data.research[0]} flipOrder={false}/>
+        <ContentImageStat data={data.research[0]} flipOrder={false}/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
-        <ContentImageStat
-                title="Face Mask Detecting Using Artificial Intelligence, Machine Learning and Computer Vision"
-                data={data.research[1]} flipOrder={true}/>
+        <ContentImageStat data={data.research[1]} flipOrder={true}/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
-        <UnalignCards title="Key Achievements and Capabilities" data={carddata}/>
+        <UnalignCards title="Key Achievements and Capabilities" data={data.researchachievements}/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
-        <Jumbotron title="Contacts"
-                   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
-                   btn_name="Contact Me" btn_href="/contact"/>
+        <Jumbotron title="Connect with Me"
+                   description="I'm always interested in new opportunities and collaborations. Feel free to reach out if you have questions, want to discuss potential projects, or simply connect. I look forward to hearing from you!"
+                   btn_name="Contact Now" btn_href="/contact"/>
     </ScrollAnimationWrapper>
 </Layout>

@@ -4,7 +4,6 @@ import Accordion from '@components/common/Accordion.astro';
 import Hero from '@components/home/Hero.astro';
 import Cards from '@components/common/Cards.astro';
 import Jumbotron from '@components/common/Jumbotron.astro';
-import Footer from '@components/common/Footer.astro';
 
 import Layout from '@layouts/Layout.astro';
 import {data} from '@data';
@@ -14,7 +13,7 @@ import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.as
 <Layout description="" title={"Home · " + data.name}>
     <ScrollAnimationWrapper>
         <Hero description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
-              data={data} btn_name="Download CV" btn_href="/pricing"/>
+              data={data} btn_name="Download CV" btn_href="https://www.williamto.com/assets/files/resume.pdf"/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
         <Cards title="Transferrable Skills" data={data.transferableskills}/>
@@ -26,8 +25,8 @@ import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.as
         <Description title="About" data={data.about}/>
     </ScrollAnimationWrapper>
     <ScrollAnimationWrapper>
-        <Jumbotron title="Contacts"
-                   description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
-                   btn_name="Contact Me" btn_href="/contact"/>
+        <Jumbotron title="Connect with Me"
+                   description="I'm always interested in new opportunities and collaborations. Feel free to reach out if you have questions, want to discuss potential projects, or simply connect. I look forward to hearing from you!"
+                   btn_name="Contact Now" btn_href="/contact"/>
     </ScrollAnimationWrapper>
 </Layout>

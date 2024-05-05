@@ -13,8 +13,12 @@ const education = data.education;
         description="" title={"Experiences · " + data.name}
 >
     <ScrollAnimationWrapper>
-        <Heading title="Experiences" description=""/>
+        <Heading title="Work Experience" description=""/>
     </ScrollAnimationWrapper>
-    <AcademicExperience title="Academic Experience" data={education}/>
-    <Experience title="Work Experience" data={data.experience}/>
+    <Experience title="" data={data.experience}/>
+    <ScrollAnimationWrapper>
+        <Heading title="Academic Achievements" description=""/>
+    </ScrollAnimationWrapper>
+    <AcademicExperience title="" data={education}/>
+    
 </Layout>
