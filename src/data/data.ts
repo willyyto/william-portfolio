@@ -276,7 +276,7 @@ export const data = {
     {
       title: 'Comparative Analysis on AI Language Models: ChatGPT-3 and Bard in Debate',
       imageUrl: '/assets/chatgpt-bard.webp',
-      buttonUrl: 'https://www.williamto.com/assets/files/face_mask_detection_research_question.pdf',
+      buttonUrl: 'https://www.williamto.com/assets/files/chatgpt-vs-bard.pdf',
       description: [
         "This research paper explores the capabilities and limitations of advanced language models, specifically OpenAI's ChatGPT-3 and Google's Bard, in the context of debating controversial topics. Through structured debates spanning four categories—factual, optional, planning, and problem-solving—this study evaluates each model's performance in terms of relevance, coherence, and factual accuracy. The findings reveal that while both models exhibit proficient linguistic abilities, ChatGPT-3 generally outperforms Bard, especially in maintaining conversational fluidity and mimicking human-like responses. This comparative analysis highlights the evolving efficacy of language models in handling complex communicative tasks and underscores the ongoing need for advancements to address current limitations.",
       ],
