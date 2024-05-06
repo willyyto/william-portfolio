@@ -1,0 +1,30 @@
+---
+import Layout from '@layouts/Layout.astro';
+import {data} from '@data';
+---
+
+<Layout
+    description="Contact Submission Success" 
+    title={"Thank You · " + data.name}
+>
+    <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="flex flex-col items-center text-center gap-8 sm:gap-10">
+                <div class="flex flex-col gap-4 sm:gap-6">
+                    <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+                        Thank You!
+                    </h1>
+                    <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
+                        Your message has been successfully sent. I will get back to you soon!
+                    </p>
+                </div>
+                <a
+                    href="/"
+                    class="bg-secondary hover:bg-secondaryhover focus-visible:outline-secondaryhover inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                    Go back home
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -186,7 +186,7 @@ export const data = {
       },
     ],
   },
-  transferableskills: [
+  transferable: [
     {
       id: '01',
       name: 'Communication',
@@ -204,6 +204,44 @@ export const data = {
       name: 'Time Management and Organization',
       description:
         'Skilled in prioritizing and managing tasks effectively under tight schedules, honed through balancing full-time employment with full-time study. Proficient in organizing daily activities and project milestones, demonstrated in a professional setting where I coordinate project management and stakeholder meetings to ensure timely deliverables.',
+    },
+  ],
+  technical: [
+    {
+      id: '01',
+      name: 'Programming Languages',
+      tags: ['JavaScript', 'Typescript', 'HTML', 'CSS', 'Sass', 'C#', 'Python', 'SQL'],
+    },
+    {
+      id: '02',
+      name: 'Libraries & Frameworks',
+      tags: [
+        'React',
+        'Next.js',
+        'Angular',
+        'Svelte',
+        'Node.js',
+        'Tailwind CSS',
+        '.Net Framework',
+        'AngularJS',
+        'Bootstrap',
+        'Astro',
+      ],
+    },
+    {
+      id: '03',
+      name: 'Tools & Platforms',
+      tags: ['Git', 'GitHub', 'WordPress', 'Azure', 'AWS', 'Terraform'],
+    },
+    {
+      id: '04',
+      name: 'Methodologies',
+      tags: ['Agile Methodologies', 'Restful Services/API'],
+    },
+    {
+      id: '05',
+      name: 'Databases',
+      tags: ['MySQL', 'PostgreSQL'],
     },
   ],
   expertise: [
