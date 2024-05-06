@@ -13,7 +13,7 @@ const {title, data} = Astro.props as IDefaultComponentProps;
                             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
                                 {cards.map((card: any) => (
                                         <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-                                            <p class="text-sm">{card.id}</p>
+                                            <p class="text-sm"><b class="text-sm text-secondary">|  </b> {card.id}</p>
                                             <div class="flex flex-col gap-4">
                                                 <h3 class="text-xl font-medium">{card.name}</h3>
                                                 <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
