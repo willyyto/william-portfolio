@@ -1,0 +1,21 @@
+---
+import {type IDefaultComponentProps} from "@types";
+const {btn_name, btn_href} = Astro.props as IDefaultComponentProps;
+---
+
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="flex flex-col gap-4 sm:gap-6 items-center">
+            <a
+                href={btn_href}
+                class="group inline-block text-md sm:text-s lg:text-md font-medium transition-all hover:text-locationblue"
+                target="_blank" rel="noopener noreferrer"
+            >
+                {btn_name}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 ml-1 transition-transform group-hover:scale-100 group-hover:translate-x-1 group-hover:-translate-y-1">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>

@@ -37,69 +37,84 @@ export const data = {
       ],
     },
   ],
-  experience: [
+  educationexperience: [
     {
-      name: 'Picnet',
-      location: 'Crows Nest, NSW',
-      description:
-        "I am currently employed as an junior engineer at Picnet, an IT service and consulting firm whose clients include some of Australia's largest businesses and household names in the corporate and public sectors.",
-      startDate: 'Feb 2022',
-      endDate: 'Present',
-      projects: [
-        {
-          name: 'NSW Health Database Optimisation',
-          location: 'NSW E-Health',
-          descriptions: [
-            '•	Responsible for analysing data and creating optimised views for reporting complex data within NSW Health.',
-            '•	Improved the querying performance of previous reporting views and tables through indexing and caching data.',
-            '•	The key finding from analysing patient data were communicated in a business case report towards NSW Health senior management.',
-            '•	Attained knowledge of SQL Server Management Studio, Server Integration Services, Server Reporting Services, Server Analysis Services, and Server Data Tools.',
-          ],
-        },
-        {
-          name: 'NSW Health Web Application Security Enhancement',
-          location: 'NSW E-Health',
-          descriptions: [
-            '•	Designed and developed a more secure security architecture for the NSW Health Web Application using Active Directory, AngularJS and .Net framework.',
-            '•	Improved authentication performance for the NSW Health Web Application by about 55%.',
-            '•	Facilitated the migration of NSW Health Web Application from on-premises to cloud using Amazon Web Service.',
-            '•	Collaborated with NSW E-Health for the testing and deployment of the Web Application onto the new cloud platform.',
-            '•	Created documentation for the web application including database schemas diagrams for the purpose of documenting the database structure.',
-            '•	Reviewed code and developed unit test to ensure all security features are operational.',
-          ],
-        },
-        {
-          name: 'Centazio Data Integration Dashboard ',
-          location: 'PicNet',
-          descriptions: [
-            '•	Designed and develop the Centazio dashboard for monitoring the system using Sveltekit, IBM carbon design, Azure Web Service and .Net Framework.',
-            '•	Developed tools for monitoring and managing Azure Integration services using Azure API.',
-            '•	Developed code in accordance with appropriate design and architectural rules.',
-            '•	Working in a cross-functional team utilising agile development.',
-            '•	Deploying dashboard onto Azure Web Application.',
-          ],
-        },
+      name: '',
+      title:
+        'Bachelor of Engineering (Honours) Diploma in Professional Engineering Practice (ICT) (Software)',
+      jobtitles: ['University Of Technology Sydney'],
+      date: '2015 - 2023',
+      descriptions: [
+        '•	Undertook a undergraduate capstone research project on Face Mask Detection using Artificial Intelligence and Machine Learning.',
+        '•	GPA: 6.25',
+        '•	WAM: 82',
       ],
     },
     {
-      name: 'Benevolence Financial Group',
-      location: 'Macquarie Park, NSW',
-      description:
-        'Benevolence Financial Group (BFG) is a social enterprise mortgage and finance brokerage firm which utilises technology to automate the process of applying for a loan.',
-      startDate: 'Aug 2020',
-      endDate: 'Apr 2022',
-      projects: [
-        {
-          name: 'BFG Home Loan CRM Web Application',
-          location: 'Benevolence Financial Group',
-          descriptions: [
-            '•	Built a proprietary home loan CRM tool using the ASP .NET Framework and sales trekker API for comparing and suggesting home loans to customers.',
-            '•	Supported end-to-end software development for CRM tools from concept to deployment. ',
-            '•	Developed landing pages for targeted marketing using HTML, CSS and boostrap.',
-            '•	Responsible for coordinating the team to ensure technical quality and on-time business delivery.',
-            '•	Acquired knowledge of Git command line and tortoise git, encompassing creating branches, commits, merging, pull requests, and pushing onto the repository.',
-          ],
-        },
+      name: '',
+      title: 'High School Certificate',
+      jobtitles: ['Westfield Sports High School'],
+      date: '2009 - 2015',
+      descriptions: [
+        '• Designed and developed "Enigma Run," a side-scroller web player game, as a major final project for the Industrial Technology Multimedia course.',
+      ],
+    },
+    {
+      name: '',
+      title: 'National Computer Science School (NCSS) Summer Program',
+      jobtitles: ['University Of Sydney'],
+      date: '2013 - 2015',
+      descriptions: [
+        '• Developed "Cinemeow," a web application, in 10 days with a cross-functional team, enabling users to create, comment on, watch, and share videos live with friends.',
+      ],
+    },
+  ],
+  experience: [
+    {
+      name: 'Picnet',
+      title: 'Junior Full-Stack Software Engineer',
+      jobtitles: ['Software Developer'],
+      date: 'Mar 2023 - Present',
+      descriptions: [
+        'At Picnet, my role as a Junior Full-Stack Software Engineer involves partnering with top-tier Australian businesses and government sectors to drive significant technological advances. My daily responsibilities include the application of state-of-the-art technology to enhance system performance and improve user experiences, ensuring that our clients receive the most efficient and effective solutions possible.',
+        "One of my key projects was leading a comprehensive overhaul of healthcare data systems. This initiative focused on creating sophisticated SQL views and optimizing databases to enhance data processing speeds by 50%, which significantly supported our healthcare clients' ability to make informed decisions quickly and accurately.",
+        'I also took on the responsibility of designing a secure architecture for critical health service applications, utilizing technologies like Active Directory, AngularJS, and .NET framework. This enhancement not only fortified our security measures but also optimized overall operational efficiency, maintaining high performance without sacrificing security.',
+        'Moreover, I managed a pivotal migration of services to Amazon Web Services, which was aimed at improving scalability and reducing operational costs by 30%. This project was particularly challenging due to the stringent requirement for minimal downtime and was successfully executed with my strategic oversight and meticulous planning.',
+      ],
+      tags: [
+        'Python',
+        'SQL',
+        'AngularJS',
+        '.NET',
+        'Azure',
+        'Active Directory',
+        'AWS',
+        'SvelteKit',
+        'IBM Carbon Design',
+        'Azure Web Services',
+        'Azure API',
+        'Terraform',
+      ],
+    },
+    {
+      name: 'OpenHomeLoan',
+      title: 'Intern Software Developer',
+      date: 'Aug 2020 - April 2021',
+      descriptions: [
+        'As an Intern Software Developer at OpenHomeLoan, I spearheaded the development of a bespoke CRM application tailored for the mortgage sector. This project, utilizing ASP.NET and Sales Trekker API, revolutionized how loan processing systems provided insightful, actionable data to users, enhancing their decision-making process.',
+        "Throughout the development lifecycle of this CRM tool, from conception to deployment, I ensured that every phase aligned with our strategic business objectives, which ultimately resulted in a 40% increase in customer engagement—a testament to the tool's impact on enhancing customer interactions.",
+        'In addition to my developmental duties, I was also responsible for the design and implementation of responsive web interfaces, significantly boosting user engagement and conversion rates. My approach not only focused on technical excellence but also emphasized collaborative teamwork and adhering to project timelines, which were crucial for the on-time delivery of the tool.',
+      ],
+      tags: [
+        'ASP.NET',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Typescript',
+        'Sass',
+        'C#',
+        'Bootstrap',
+        'Sales Trekker API',
       ],
     },
   ],
@@ -250,6 +265,7 @@ export const data = {
       name: 'Full-Stack Development',
       description:
         'Proficient in leveraging modern web technologies including React, Next.js, Angular, and Svelte to create scalable and responsive web applications. Demonstrated capability in handling both frontend aesthetics and backend functionality, ensuring comprehensive software solutions.',
+      tags: ['JavaScript', 'Typescript', 'HTML', 'CSS', 'Sass', 'C#', 'Python', 'SQL'],
     },
     {
       id: 'expertise-2',

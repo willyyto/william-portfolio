@@ -1,0 +1,84 @@
+---
+import {type IDefaultComponentProps} from "@types";
+const {title, data, btn_href, btn_name} = Astro.props as IDefaultComponentProps;
+
+---
+
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="lg:col-span-1">
+                <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{title}</h2>
+            </div>
+            
+            <div class="lg:col-span-2">
+                <div class="-mt-3 container">
+                    {
+                        data.map((item: any) => (
+                            <div
+                                class="px-4 py-6 border-b border-primary-900/10 dark:border-primary-300/10 transition-all rounded-t-3xl hover:rounded-3xl hover:bg-primary-500/10 dark:hover:bg-primary-400/10 box"
+                            >
+                                <div class="flex items-center justify-between">
+                                    <h1 class="text-xl font-md title whitespace-normal">{item.title}{item.name ? ' • ' + item.name : ''}</h1>
+                                    <span class="ml-6 flex h-7 items-center whitespace-nowrap">{item.date}</span>
+                                </div>
+
+                                {item.jobtitles?.map((jobtitle: string) => (
+                                    <div class="flex items-center justify-between">
+                                    <h1 class="text-md font-md text-primary-800/60 dark:text-primary-200/60">{jobtitle}</h1>
+                                </div>
+                                    ))}
+
+                                {item.descriptions?.map((description: string) => (
+                                    <p class="py-1 text-primary-950/70 dark:text-primary-200/70 text-base">
+                                    {description}
+                                </p>
+                                    ))}
+        
+                                <div class="mt-2 flex flex-wrap">
+                                    {item.tags?.map((tag: string) => (
+                                        <span class="bg-blue-400/30 text-primary dark:bg-blue-400/10 dark:text-locationblue text-sm px-3 py-1 rounded-full mx-1 my-1">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))
+                    }
+
+                    {btn_href && btn_name && (
+                        <div class="mt-4 flex flex-col gap-4 sm:gap-6 items-center"><a
+                            href={btn_href}
+                            class="group inline-block text-md sm:text-lg lg:text-md font-medium transition-all hover:text-locationblue"
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            {btn_name}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 ml-1 transition-transform group-hover:scale-125 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a></div>
+                        
+                    )}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <style>
+    /* This style will ensure that when any div is hovered, others are dimmed */
+    .container:hover .box {
+      opacity: 0.5;
+      filter: blur(0.2px);
+    }
+    
+    .box:hover {
+      opacity: 1 !important; /* Ensure the hovered box is fully visible */
+      filter: none !important;
+    }
+    .box:hover .title {
+      color: #33d2ff !important;
+    }
+
+  </style>

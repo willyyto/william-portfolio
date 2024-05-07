@@ -1,8 +1,9 @@
 ---
 import Heading from '@components/common/Heading.astro';
-import AcademicExperience from '@components/experience/AcademicExperience.astro';
-import Experience from '@components/experience/Experience.astro';
+import Link from '@components/common/Link.astro';
+import ExperienceAccordion from '@components/experience/ExperienceAccordion.astro';
 import ScrollAnimationWrapper from '@components/common/ScrollAnimationWrapper.astro';
+import Cards from '@components/common/Cards.astro';
 import Layout from '@layouts/Layout.astro';
 import {data} from '@data';
 
@@ -12,13 +13,20 @@ const education = data.education;
 <Layout
         description="Experiences" title={"Experiences · " + data.name}
 >
+
     <ScrollAnimationWrapper>
-        <Heading title="Work Experience" description=""/>
+        <Heading title="Experiences" description=""/>
     </ScrollAnimationWrapper>
-    <Experience title="" data={data.experience}/>
     <ScrollAnimationWrapper>
-        <Heading title="Academic Achievements" description=""/>
+        <ExperienceAccordion title="Work Experience" data={data.experience} btn_name="View My Full Resume" btn_href="https://www.williamto.com/assets/files/resume.pdf"/>
     </ScrollAnimationWrapper>
-    <AcademicExperience title="" data={education}/>
+    <ScrollAnimationWrapper>
+        <ExperienceAccordion title="Academic Achievements" data={data.educationexperience}/>
+    </ScrollAnimationWrapper>
+
+    <ScrollAnimationWrapper>
+        <Cards title="Skill Overview" data={data.technical}/>
+    </ScrollAnimationWrapper>
+
     
 </Layout>

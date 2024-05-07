@@ -11,6 +11,7 @@ module.exports = {
             transparent: 'transparent',
             white: '#ffffff',
             primary: colors.stone,
+            blue: colors.blue,
             secondary: '#8356ff',
             secondaryhover: '#6837cc',
             locationblue: "#33d2ff",
