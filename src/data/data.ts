@@ -24,7 +24,7 @@ export const data = {
       startDate: '2009',
       endDate: '2015',
       descriptions: [
-        '• Designed and developed "Enigma Run," a side-scroller web player game, as a major final project for the Industrial Technology Multimedia course.',
+        '• Designed and developed "Enigma Run", a side-scroller web player game, as a major final project for the Industrial Technology Multimedia course.',
       ],
     },
     {
@@ -45,9 +45,8 @@ export const data = {
       jobtitles: ['University Of Technology Sydney'],
       date: '2015 - 2023',
       descriptions: [
-        '•	Undertook a undergraduate capstone research project on Face Mask Detection using Artificial Intelligence and Machine Learning.',
-        '•	GPA: 6.25',
-        '•	WAM: 82',
+        '•	Graduated with First Class Honours',
+        '•	Undertook a capstone research project on comparative analysis of ChatGPT3 and Google Bard.',
       ],
     },
     {
@@ -212,7 +211,7 @@ export const data = {
       id: '02',
       name: 'Leadership',
       description:
-        'At Benevolence Financial Group, I led a team of software engineers in developing an automated home loan CRM digital platform. My role involved collaborating with cross-functional teams of mortgage brokers to create web application tools, managing team operations, and directing project tasks. I effectively implemented agile methodologies to meet project targets and deliverables.',
+        'At OpenHomeLoan, I led a team of software engineers in developing an automated home loan CRM digital platform. My role involved collaborating with cross-functional teams of mortgage brokers to create web application tools, managing team operations, and directing project tasks. I effectively implemented agile methodologies to meet project targets and deliverables.',
     },
     {
       id: '03',
@@ -300,11 +299,11 @@ export const data = {
   ],
   projects: [
     {
-      title: 'BFG Home Loan CRM Web Application',
+      title: 'OpenHomeLoan CRM Web Application',
       isFeatured: true,
       thumbnail: '/assets/bfg-webapp.png',
       githubUrl: '',
-      liveUrl: 'https://bfgloans.com.au/',
+      liveUrl: 'https://openloans.com.au/refinance/',
     },
     {
       title: 'Old Personal Portfolio',
