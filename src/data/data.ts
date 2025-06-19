@@ -74,69 +74,59 @@ export const data = {
       name: 'PicNet',
       title: 'Senior Software Engineer',
       jobtitles: ['Senior Software Engineer'],
-      date: 'Feb 2024 – July 2025',
+      date: 'Jan 2024 - Present',
       descriptions: [
-        '• Led full lifecycle delivery of Lymbase, a clinician-facing lymphoedema support platform deployed on AWS ECS. Built containerized Python-Flask microservices, React UI, secure token-based auth, and real-time circumference analytics.',
-        '• Reduced assessment time by 40% via advanced auto-detection of circumference changes and intuitive visual dashboards for health professionals.',
-        '• Designed IaC for multi-region deployments using Terraform and Bicep. Automated provisioning of Azure App Services, Functions, SQL, Storage, and Key Vault resources across isolated environments.',
-        '• Implemented CI/CD pipelines using GitHub Actions and Azure DevOps. Configured test coverage, image signing, artifact publishing, and staging workflows to support gated releases.',
-        '• Established an enterprise-grade DevSecOps practice by creating hardened Docker images, vulnerability scanning, and secure token rotation pipelines.',
-        '• Delivered a centralized secret management strategy using Azure Key Vault and AWS Secrets Manager. Created reusable CI/CD templates and rotation policies for multi-cloud consistency.',
-        '• Developed resilient ETL scripts to ingest Excel-based garment data from manufacturers. Normalized and validated data against SQL schemas for seamless downstream integration.',
-        '• Engineered RESTful integrations with third-party systems (Xero, Lightspeed, Hello Club), enabling near real-time sync across POS, finance, and membership data with robust retry logic.',
-        '• Collaborated with cross-functional teams (PMs, data analysts, QA) to define data schemas, error-handling contracts, and scalable service architecture.',
-        '• Acted as technical lead for multiple projects—running client workshops, mapping requirements, creating architectural diagrams, managing estimates, and producing sprint plans.',
-        '• Documented onboarding guides for internal tools, including Terraform modules, CI/CD pipelines, and secret usage policies to reduce ramp-up time for new hires.'
+        'Leading end-to-end software solutions and infrastructure initiatives at PicNet, partnering with top-tier Australian businesses and government sectors including NSW Health. Responsible for architecting scalable cloud solutions, optimizing enterprise-scale systems, and managing complex client deliveries while mentoring junior developers.'
+      ],
+      achievements: [
+        'Led comprehensive Azure migration project, designing Infrastructure as Code (Terraform) solutions that reduced deployment effort by 70% and enabled automated provisioning of App Service, Key Vault, SQL Database, and Storage Accounts',
+        'Optimized NSW Health database indexes on massive TB-scale systems, shrinking query response times from hours to minutes and unlocking timely insights for clinical analysts',
+        'Architected and deployed Lymbase clinical platform on AWS using containerized Python-Flask microservices and React frontend, implementing secure token-based authentication',
+        'Built advanced analytics with automated circumference-change detection, cutting clinical assessment time by 30% and providing instant visual insights',
+        'Established unified secret-management program across Azure Key Vault and AWS Secrets Manager, eliminating plaintext credentials and automating organization-wide secret rotation',
+        'Developed robust integration pipelines for Lightspeed, Xero, and Hello Club APIs, enabling real-time synchronization of sales, billing, and activity data across platforms',
+        'Collaborated with NSW Health to integrate four new patient-file formats into mLoad, reducing file-processing errors by 90% and cutting turnaround time by 50%'
       ],
       tags: [
-        'AWS ECS', 'Python', 'Flask', 'React', 'Terraform', 'Bicep', 'Azure',
-        'App Service', 'Azure Functions', 'Key Vault', 'CI/CD', 'Docker', 'GitHub Actions',
-        'Azure DevOps', 'Secrets Manager', 'OAuth2', 'PostgreSQL', 'Microservices',
-        'DevSecOps', 'Infrastructure as Code', 'xUnit', 'Moq', 'Event-Driven Design'
+        'Azure', 'AWS', 'Terraform', 'Python', 'Flask', 'React', 'Docker',
+        'SQL Server', 'Azure DevOps', 'GitHub Actions', 'Kubernetes', 'C#'
       ]
     },
     {
       name: 'PicNet',
       title: 'Junior Software Engineer',
       jobtitles: ['Junior Software Engineer'],
-      date: 'Feb 2022 – Jan 2024',
+      date: 'Feb 2022 - Jan 2024',
       descriptions: [
-        '• Re-architected NSW Health’s mLoad uploader from a legacy FTP system to Azure Blob SFTP with per-row validation logic, enabling robust, high-throughput patient data uploads across hospitals.',
-        '• Built custom logging and error triage tools to surface real-time ingestion issues for healthcare admins and dramatically improved observability.',
-        '• Introduced a lightweight Role-Based Access Control (RBAC) model replacing Active Directory groups. Cut login latency by 70% and enabled easier onboarding for over 600 users.',
-        '• Integrated four new complex patient file formats from regional hospitals into the system. Developed modular parsers and transformation layers, eliminating manual uploads and reducing file-processing errors by 90%.',
-        '• Developed a Power BI custom visual for embedded contextual commenting. Automatically tagged users by identity and synchronized feedback via REST API—boosted user feedback engagement by 60%.',
-        '• Rebuilt PicNet’s public website using Astro and deployed to AWS Amplify with full CI/CD. Improved performance, SEO (Lighthouse 97), and automated zero-downtime deployments.',
-        '• Automated SharePoint-to-SQL ETL pipelines for Guide Dogs using Azure Functions. Created metadata-driven logic for dynamic form ingestion, cutting manual reporting tasks by 80%.',
-        '• Created reusable Azure Function templates for other projects, with environment-specific config via app settings and secure secret injection.',
-        '• Contributed to Centazio, PicNet’s data orchestration framework, with test coverage, bug fixes, documentation, and CI integration.',
-        '• Wrote extensive unit and integration tests using xUnit and Moq. Integrated these into CI pipelines to support deterministic builds and automated regression testing.',
-        '• Mentored junior engineers in API design, Azure usage, and debugging production workloads. Reviewed code, set conventions, and shared best practices regularly.'
+        'Developed and modernized critical healthcare and business applications while contributing to cloud infrastructure initiatives. Focused on improving system performance, user experience, and automating manual processes for major clients including NSW Health and Guide Dogs NSW.'
+      ],
+      achievements: [
+        'Modernized NSW Health patient-data uploader with row-level validation engine and migrated FTP to Azure Blob SFTP, boosting throughput 4x and achieving near-zero transfer failures across statewide hospitals',
+        'Built custom Power BI commenting visual (TypeScript + Node.js) with auto-tagging functionality, boosting dashboard engagement by 60% and eliminating email-based feedback loops',
+        'Re-platformed PicNet\'s website to Astro + AWS Amplify architecture with GitHub Actions CI/CD, improving Lighthouse performance from 60 to 97 and enabling zero-downtime releases',
+        'Automated SharePoint-to-Azure SQL data workflows for Guide Dogs NSW using metadata-driven Azure Functions pipeline, accelerating program reporting by 80%',
+        'Upgraded NSW Health application security from legacy AD groups to lightweight RBAC, cutting login-to-dashboard latency by 70% and simplifying onboarding for 600+ clinical users'
       ],
       tags: [
-        'Azure', 'Azure Blob Storage', 'RBAC', 'FTP Migration', 'Power BI', 'Node.js',
-        'Astro', 'AWS Amplify', 'GitHub Actions', 'CI/CD', 'SQL Server', 'Data Validation',
-        'SharePoint Integration', 'TypeScript', 'Agile', 'TDD', 'xUnit', 'Moq',
-        'Healthcare IT', 'ETL Pipelines'
+        'Azure Functions', 'TypeScript', 'Node.js', 'Power BI', 'Astro',
+        'AWS Amplify', 'SharePoint', 'Azure SQL', 'Active Directory', 'C#'
       ]
     },
     {
       name: 'OpenHomeLoan',
-      title: 'Intern Full Stack Software Developer',
-      jobtitles: ['Intern Full Stack Software Developer'],
-      date: 'Aug 2020 – Apr 2021',
+      title: 'Intern Software Developer',
+      jobtitles: ['Intern Software Developer'],
+      date: 'Aug 2020 - April 2021',
       descriptions: [
-        '• Created a bespoke CRM-style loan automation engine using ASP.NET integrated with the SalesTrekker API. Tripled loan approval processing speed and allowed brokers to manage pipelines more efficiently.',
-        '• Developed branded, responsive marketing pages using HTML, CSS, Bootstrap, and JavaScript—resulting in a 25% increase in conversion rates for lead-generation campaigns.',
-        '• Designed RESTful API integrations for customer lookups, pre-approval checks, and real-time document submission using custom backend endpoints.',
-        '• Created reusable React components for form validation, progress tracking, and error handling within the broker dashboard.',
-        '• Gained experience working in a startup Agile team—participated in sprint planning, issue triaging, backlog grooming, and weekly product demos.',
-        '• Wrote internal documentation for system architecture, API endpoints, and dev environment setup to support future team members.',
-        '• Participated in client support during launch phases, including hotfix deployment, monitoring, and first-line feedback handling.'
+        'Developed automated loan processing systems and customer-facing web applications as part of a dynamic fintech startup environment. Collaborated directly with mortgage brokers and business stakeholders to create tools that streamlined loan approval processes.'
+      ],
+      achievements: [
+        'Built comprehensive ASP.NET + SalesTrekker API loan-automation engine that tripled approval speed and delivered personalized home-loan recommendations at scale',
+        'Developed responsive marketing landing pages that increased conversion rates by 25% through improved user experience and optimized customer journey flows',
+        'Collaborated with cross-functional teams of mortgage brokers to gather requirements and iterate on CRM functionality based on real-world usage feedback'
       ],
       tags: [
-        'ASP.NET', 'SalesTrekker API', 'C#', 'React', 'Bootstrap', 'HTML', 'CSS',
-        'JavaScript', 'Customer Experience', 'REST APIs', 'Fintech', 'Agile'
+        'ASP.NET', 'C#', 'SalesTrekker API', 'HTML/CSS', 'JavaScript', 'SQL Server'
       ]
     }
   ],
