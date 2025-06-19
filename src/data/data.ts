@@ -1,10 +1,11 @@
 export const data = {
   baseUrl: 'https://www.williamto.com',
   name: 'William To',
+  personalStatement: "I'm a mission-driven engineer who thrives at the intersection of clean code, cloud architecture, and real-world impact. I believe engineering is a craft—and I bring equal rigor to system design, testing strategy, and team culture.",
   pictureUrl: '/assets/portfolio-picture.png',
   about: [
-    'I am a graduate software engineer deeply passionate about crafting products that deliver delightful experiences and indispensable utility to end-users. My career goal is to continually enhance my technological acumen to tackle complex challenges in the future.',
-    'I specialise in full-stack development, primarily using C# with .NET Core and .NET Framework for backend solutions, and Svelte, Angular and React with TypeScript/JavaScript for frontend development. My professional experience has also enabled me to delve into other areas, including DevOps, data analytics, and cloud technologies such as Amazon Web Services and Microsoft Azure.',
+    "I'm a Senior Software Engineer with over 5 years of experience architecting and delivering secure, cloud-native applications for healthcare, fintech, and enterprise domains. I’m passionate about designing resilient systems, optimizing developer experience, and shipping high-impact software.",
+    "I specialize in .NET 8, C#, React, Python, and cloud platforms like Azure and AWS. I’ve led full-stack and DevOps initiatives involving infrastructure as code (Terraform, Bicep), secret rotation governance, RBAC design, and real-time analytics. I thrive in fast-paced environments where security, performance, and scalability are top priorities."
   ],
   education: [
     {
@@ -70,52 +71,74 @@ export const data = {
   ],
   experience: [
     {
-      name: 'Picnet',
-      title: 'Junior Full-Stack Software Engineer',
-      jobtitles: ['Software Developer'],
-      date: 'Mar 2023 - Present',
+      name: 'PicNet',
+      title: 'Senior Software Engineer',
+      jobtitles: ['Senior Software Engineer'],
+      date: 'Feb 2024 – July 2025',
       descriptions: [
-        'At Picnet, my role as a Junior Full-Stack Software Engineer involves partnering with top-tier Australian businesses and government sectors to drive significant technological advances. My daily responsibilities include the application of state-of-the-art technology to enhance system performance and improve user experiences, ensuring that our clients receive the most efficient and effective solutions possible.',
-        "One of my key projects was leading a comprehensive overhaul of healthcare data systems. This initiative focused on creating sophisticated SQL views and optimizing databases to enhance data processing speeds by 50%, which significantly supported our healthcare clients' ability to make informed decisions quickly and accurately.",
-        'I also took on the responsibility of designing a secure architecture for critical health service applications, utilizing technologies like Active Directory, AngularJS, and .NET framework. This enhancement not only fortified our security measures but also optimized overall operational efficiency, maintaining high performance without sacrificing security.',
-        'Moreover, I managed a pivotal migration of services to Amazon Web Services, which was aimed at improving scalability and reducing operational costs by 30%. This project was particularly challenging due to the stringent requirement for minimal downtime and was successfully executed with my strategic oversight and meticulous planning.',
+        '• Led full lifecycle delivery of Lymbase, a clinician-facing lymphoedema support platform deployed on AWS ECS. Built containerized Python-Flask microservices, React UI, secure token-based auth, and real-time circumference analytics.',
+        '• Reduced assessment time by 40% via advanced auto-detection of circumference changes and intuitive visual dashboards for health professionals.',
+        '• Designed IaC for multi-region deployments using Terraform and Bicep. Automated provisioning of Azure App Services, Functions, SQL, Storage, and Key Vault resources across isolated environments.',
+        '• Implemented CI/CD pipelines using GitHub Actions and Azure DevOps. Configured test coverage, image signing, artifact publishing, and staging workflows to support gated releases.',
+        '• Established an enterprise-grade DevSecOps practice by creating hardened Docker images, vulnerability scanning, and secure token rotation pipelines.',
+        '• Delivered a centralized secret management strategy using Azure Key Vault and AWS Secrets Manager. Created reusable CI/CD templates and rotation policies for multi-cloud consistency.',
+        '• Developed resilient ETL scripts to ingest Excel-based garment data from manufacturers. Normalized and validated data against SQL schemas for seamless downstream integration.',
+        '• Engineered RESTful integrations with third-party systems (Xero, Lightspeed, Hello Club), enabling near real-time sync across POS, finance, and membership data with robust retry logic.',
+        '• Collaborated with cross-functional teams (PMs, data analysts, QA) to define data schemas, error-handling contracts, and scalable service architecture.',
+        '• Acted as technical lead for multiple projects—running client workshops, mapping requirements, creating architectural diagrams, managing estimates, and producing sprint plans.',
+        '• Documented onboarding guides for internal tools, including Terraform modules, CI/CD pipelines, and secret usage policies to reduce ramp-up time for new hires.'
       ],
       tags: [
-        'Python',
-        'SQL',
-        'AngularJS',
-        '.NET',
-        'Azure',
-        'Active Directory',
-        'AWS',
-        'SvelteKit',
-        'IBM Carbon Design',
-        'Azure Web Services',
-        'Azure API',
-        'Terraform',
+        'AWS ECS', 'Python', 'Flask', 'React', 'Terraform', 'Bicep', 'Azure',
+        'App Service', 'Azure Functions', 'Key Vault', 'CI/CD', 'Docker', 'GitHub Actions',
+        'Azure DevOps', 'Secrets Manager', 'OAuth2', 'PostgreSQL', 'Microservices',
+        'DevSecOps', 'Infrastructure as Code', 'xUnit', 'Moq', 'Event-Driven Design'
+      ]
+    },
+    {
+      name: 'PicNet',
+      title: 'Junior Software Engineer',
+      jobtitles: ['Junior Software Engineer'],
+      date: 'Feb 2022 – Jan 2024',
+      descriptions: [
+        '• Re-architected NSW Health’s mLoad uploader from a legacy FTP system to Azure Blob SFTP with per-row validation logic, enabling robust, high-throughput patient data uploads across hospitals.',
+        '• Built custom logging and error triage tools to surface real-time ingestion issues for healthcare admins and dramatically improved observability.',
+        '• Introduced a lightweight Role-Based Access Control (RBAC) model replacing Active Directory groups. Cut login latency by 70% and enabled easier onboarding for over 600 users.',
+        '• Integrated four new complex patient file formats from regional hospitals into the system. Developed modular parsers and transformation layers, eliminating manual uploads and reducing file-processing errors by 90%.',
+        '• Developed a Power BI custom visual for embedded contextual commenting. Automatically tagged users by identity and synchronized feedback via REST API—boosted user feedback engagement by 60%.',
+        '• Rebuilt PicNet’s public website using Astro and deployed to AWS Amplify with full CI/CD. Improved performance, SEO (Lighthouse 97), and automated zero-downtime deployments.',
+        '• Automated SharePoint-to-SQL ETL pipelines for Guide Dogs using Azure Functions. Created metadata-driven logic for dynamic form ingestion, cutting manual reporting tasks by 80%.',
+        '• Created reusable Azure Function templates for other projects, with environment-specific config via app settings and secure secret injection.',
+        '• Contributed to Centazio, PicNet’s data orchestration framework, with test coverage, bug fixes, documentation, and CI integration.',
+        '• Wrote extensive unit and integration tests using xUnit and Moq. Integrated these into CI pipelines to support deterministic builds and automated regression testing.',
+        '• Mentored junior engineers in API design, Azure usage, and debugging production workloads. Reviewed code, set conventions, and shared best practices regularly.'
       ],
+      tags: [
+        'Azure', 'Azure Blob Storage', 'RBAC', 'FTP Migration', 'Power BI', 'Node.js',
+        'Astro', 'AWS Amplify', 'GitHub Actions', 'CI/CD', 'SQL Server', 'Data Validation',
+        'SharePoint Integration', 'TypeScript', 'Agile', 'TDD', 'xUnit', 'Moq',
+        'Healthcare IT', 'ETL Pipelines'
+      ]
     },
     {
       name: 'OpenHomeLoan',
-      title: 'Intern Software Developer',
-      date: 'Aug 2020 - April 2021',
+      title: 'Intern Full Stack Software Developer',
+      jobtitles: ['Intern Full Stack Software Developer'],
+      date: 'Aug 2020 – Apr 2021',
       descriptions: [
-        'As an Intern Software Developer at OpenHomeLoan, I spearheaded the development of a bespoke CRM application tailored for the mortgage sector. This project, utilizing ASP.NET and Sales Trekker API, revolutionized how loan processing systems provided insightful, actionable data to users, enhancing their decision-making process.',
-        "Throughout the development lifecycle of this CRM tool, from conception to deployment, I ensured that every phase aligned with our strategic business objectives, which ultimately resulted in a 40% increase in customer engagement—a testament to the tool's impact on enhancing customer interactions.",
-        'In addition to my developmental duties, I was also responsible for the design and implementation of responsive web interfaces, significantly boosting user engagement and conversion rates. My approach not only focused on technical excellence but also emphasized collaborative teamwork and adhering to project timelines, which were crucial for the on-time delivery of the tool.',
+        '• Created a bespoke CRM-style loan automation engine using ASP.NET integrated with the SalesTrekker API. Tripled loan approval processing speed and allowed brokers to manage pipelines more efficiently.',
+        '• Developed branded, responsive marketing pages using HTML, CSS, Bootstrap, and JavaScript—resulting in a 25% increase in conversion rates for lead-generation campaigns.',
+        '• Designed RESTful API integrations for customer lookups, pre-approval checks, and real-time document submission using custom backend endpoints.',
+        '• Created reusable React components for form validation, progress tracking, and error handling within the broker dashboard.',
+        '• Gained experience working in a startup Agile team—participated in sprint planning, issue triaging, backlog grooming, and weekly product demos.',
+        '• Wrote internal documentation for system architecture, API endpoints, and dev environment setup to support future team members.',
+        '• Participated in client support during launch phases, including hotfix deployment, monitoring, and first-line feedback handling.'
       ],
       tags: [
-        'ASP.NET',
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Typescript',
-        'Sass',
-        'C#',
-        'Bootstrap',
-        'Sales Trekker API',
-      ],
-    },
+        'ASP.NET', 'SalesTrekker API', 'C#', 'React', 'Bootstrap', 'HTML', 'CSS',
+        'JavaScript', 'Customer Experience', 'REST APIs', 'Fintech', 'Agile'
+      ]
+    }
   ],
   header: {
     links: [
@@ -203,101 +226,165 @@ export const data = {
   transferable: [
     {
       id: '01',
-      name: 'Communication',
+      name: 'Communication & Stakeholder Engagement',
       description:
-        'Experienced in facilitating clear, concise communication across multidisciplinary teams. Demonstrated ability to deliver effective feedback and resolve conflicts, enhancing team collaboration and project success. Proficient in presenting complex ideas succinctly to diverse stakeholders, developed through professional consultancy at Picnet.',
+        'Skilled in translating technical complexity into clear business value. Frequently present solutions to cross-functional teams and non-technical stakeholders. Led requirements workshops, authored technical documentation, and facilitated feedback loops across distributed teams and enterprise clients.'
     },
     {
       id: '02',
-      name: 'Leadership',
+      name: 'Leadership & Ownership',
       description:
-        'At OpenHomeLoan, I led a team of software engineers in developing an automated home loan CRM digital platform. My role involved collaborating with cross-functional teams of mortgage brokers to create web application tools, managing team operations, and directing project tasks. I effectively implemented agile methodologies to meet project targets and deliverables.',
+        'Proven ability to lead end-to-end delivery of critical projects. Served as technical lead on cloud migration and system modernization initiatives. Mentored junior developers, defined architecture patterns, enforced quality standards, and helped shape engineering culture within Agile teams.'
     },
     {
       id: '03',
-      name: 'Time Management and Organization',
+      name: 'Time Management & Prioritization',
       description:
-        'Skilled in prioritizing and managing tasks effectively under tight schedules, honed through balancing full-time employment with full-time study. Proficient in organizing daily activities and project milestones, demonstrated in a professional setting where I coordinate project management and stakeholder meetings to ensure timely deliverables.',
+        'Able to manage competing priorities in high-pressure environments. Delivered concurrent client deliverables and internal initiatives while balancing full-time work and study. Known for consistent on-time delivery, milestone focus, and strategic delegation when leading sprints or multi-phase projects.'
     },
+    {
+      id: '04',
+      name: 'Agile & Cross-Functional Collaboration',
+      description:
+        'Experienced in Agile delivery models including Scrum and Kanban. Comfortable collaborating across product, QA, design, DevOps, and business teams. Regularly run sprint ceremonies, backlog grooming, and Jira/Confluence-based tracking to ensure alignment and delivery velocity.'
+    },
+    {
+      id: '05',
+      name: 'Problem Solving & Adaptability',
+      description:
+        'Known for rapidly analyzing unfamiliar codebases, debugging production issues under pressure, and implementing robust, long-term fixes. Thrives in ambiguous situations by taking initiative, asking the right questions, and driving clarity in both team and system contexts.'
+    }
   ],
   technical: [
     {
       id: '01',
-      name: 'Programming Languages',
-      tags: ['JavaScript', 'Typescript', 'HTML', 'CSS', 'Sass', 'C#', 'Python', 'SQL'],
+      name: 'Languages & Scripting',
+      tags: [
+        'C#', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS', 'PowerShell', 'Bash'
+      ]
     },
     {
       id: '02',
-      name: 'Libraries & Frameworks',
+      name: 'Frameworks & Libraries',
       tags: [
-        'React',
-        'Next.js',
-        'Angular',
-        'Svelte',
-        'Node.js',
-        'Tailwind CSS',
-        '.Net Framework',
-        'AngularJS',
-        'Bootstrap',
-        'Astro',
-      ],
+        '.NET 8', 'ASP.NET Core', 'Flask', 'React', 'Angular', 'Svelte', 'Astro',
+        'Node.js', 'Express', 'xUnit', 'Moq', 'Dapper', 'Entity Framework'
+      ]
     },
     {
-      id: '03',
-      name: 'Tools & Platforms',
-      tags: ['Git', 'GitHub', 'WordPress', 'Azure', 'AWS', 'Terraform'],
+      id: '08',
+      name: 'Agile & Team Collaboration',
+      tags: [
+        'Scrum', 'Kanban', 'Jira', 'Confluence', 'Sprint Planning', 'Backlog Grooming',
+        'Stakeholder Communication', 'Cross-Functional Teams'
+      ]
     },
     {
       id: '04',
-      name: 'Methodologies',
-      tags: ['Agile Methodologies', 'Restful Services/API'],
+      name: 'DevOps & CI/CD Tooling',
+      tags: [
+        'GitHub Actions', 'Azure DevOps', 'Docker', 'Docker Compose', 'IIS',
+        'CI/CD Pipelines', 'DevSecOps', 'Secrets Rotation', 'Static Code Analysis'
+      ]
     },
     {
       id: '05',
-      name: 'Databases',
-      tags: ['MySQL', 'PostgreSQL'],
+      name: 'Infrastructure as Code (IaC)',
+      tags: [
+        'Terraform', 'Bicep', 'ARM Templates'
+      ]
     },
+    {
+      id: '06',
+      name: 'Data, Integration & Reporting',
+      tags: [
+        'SQL Server', 'PostgreSQL', 'Power BI', 'REST APIs', 'GraphQL',
+        'OAuth2', 'Excel Automation', 'SharePoint Integration'
+      ]
+    },
+    {
+      id: '07',
+      name: 'Architecture & Design Patterns',
+      tags: [
+        'Clean Architecture', 'Microservices', 'Event-Driven Design',
+        'Domain-Driven Design (DDD)', 'RBAC Security', 'Zero-Trust Security',
+        'Test-Driven Development (TDD)', 'Scalable API Design','Serverless Architecture', 'Hybrid Cloud Deployments', 'Multi-Cloud Readiness',
+        'Scalable API Gateways', 'Zero-Trust Security Architecture'
+      ]
+    },
+    {
+      id: '08',
+      name: 'Cloud – Azure Services',
+      tags: [
+        'Azure', 'Azure Functions', 'Azure App Service', 'Azure API Management',
+        'Azure Key Vault', 'Azure Blob Storage', 'Azure SQL Database',
+        'Azure Storage Queues', 'Azure Monitor', 'Azure Application Insights',
+        'Azure Service Bus', 'Azure DevOps', 'Azure Active Directory',
+        'Azure Static Web Apps'
+      ]
+    },
+    {
+      id: '09',
+      name: 'Cloud – AWS Services',
+      tags: [
+        'AWS', 'AWS ECS Fargate', 'AWS Lambda', 'AWS RDS', 'AWS S3',
+        'AWS Secrets Manager', 'AWS CloudWatch', 'AWS IAM', 'AWS Route 53',
+        'AWS CloudFormation', 'AWS Amplify', 'AWS Certificate Manager'
+      ]
+    }
   ],
   expertise: [
     {
       id: 'expertise-1',
-      name: 'Full-Stack Development',
+      name: 'Full-Stack Web Development',
       description:
-        'Proficient in leveraging modern web technologies including React, Next.js, Angular, and Svelte to create scalable and responsive web applications. Demonstrated capability in handling both frontend aesthetics and backend functionality, ensuring comprehensive software solutions.',
-      tags: ['JavaScript', 'Typescript', 'HTML', 'CSS', 'Sass', 'C#', 'Python', 'SQL'],
+        'Proficient in building end-to-end applications using modern frontend frameworks (React, Angular, Svelte, Astro) and backend stacks (.NET 8, Flask, Node.js). Experienced in architecting modular, reusable, and testable components across the UI and API layers. Skilled in delivering pixel-perfect UIs and highly-performant backends with clean architecture principles.',
+      tags: ['.NET 8', 'React', 'Angular', 'Svelte', 'Flask', 'Node.js', 'TypeScript', 'SQL']
     },
     {
       id: 'expertise-2',
-      name: 'Cloud Computing & Migration',
+      name: 'Cloud Architecture & DevOps',
       description:
-        'Experienced in cloud infrastructure management using Azure and AWS, focusing on enhancing scalability and operational efficiency. Successfully led a critical cloud migration project, demonstrating expertise in cloud architecture and deployment strategies.',
+        'Hands-on experience designing, deploying, and managing cloud-native applications on Azure and AWS. Proficient with Infrastructure-as-Code (Terraform, Bicep), containerization (Docker, ECS Fargate), and secure CI/CD automation (GitHub Actions, Azure DevOps). Delivered highly available, scalable systems with zero-downtime releases and 70% deployment effort reduction.',
+      tags: ['Azure', 'AWS', 'Terraform', 'Bicep', 'Docker', 'GitHub Actions', 'Azure DevOps']
     },
     {
       id: 'expertise-3',
-      name: 'Advanced SQL and Data Management',
+      name: 'Secure Application Design',
       description:
-        'Expert in SQL database management, focusing on complex data analysis and optimization of healthcare data. Developed and optimized SQL views to enhance system performance and reporting capabilities, significantly improving data access and analytics processes.',
+        'Built enterprise-ready platforms with zero-trust principles, RBAC, and secure token-based authentication. Designed and implemented organization-wide secrets management using Azure Key Vault and AWS Secrets Manager, eliminating plaintext credentials across cloud environments.',
+      tags: ['RBAC', 'OAuth2', 'Secrets Manager', 'Key Vault', 'Zero-Trust Security']
     },
     {
       id: 'expertise-4',
-      name: 'Data Security & System Architecture',
+      name: 'Data Engineering & API Integration',
       description:
-        'Engineered robust security architectures and developed secure web applications using .NET Framework and Active Directory. Improved system security and performance, ensuring high standards of data protection and access control.',
+        'Developed and optimized complex ETL pipelines, RESTful APIs, and third-party integrations (Xero, Lightspeed, Hello Club, Power BI). Automated data ingestion from Excel, SharePoint, and custom formats, reducing processing time by up to 80% and cutting manual effort significantly.',
+      tags: ['ETL', 'REST APIs', 'Power BI', 'PostgreSQL', 'Excel Automation', 'SharePoint']
     },
     {
       id: 'expertise-5',
-      name: 'Agile Development Practices',
+      name: 'Testing & DevSecOps Automation',
       description:
-        'Adept at facilitating agile development processes within cross-functional teams. Enhanced project agility and team productivity by adhering to stringent design and architectural standards, contributing to the timely delivery of high-quality software solutions.',
+        'Engineered test-driven development pipelines using xUnit, Moq, and containerized CI workflows. Integrated security scanning, code quality checks, and deterministic test runs into GitHub Actions and Azure DevOps. Contributed to internal tooling and test frameworks to reduce post-release bugs by 50%.',
+      tags: ['xUnit', 'Moq', 'CI/CD', 'DevSecOps', 'Test Automation']
     },
     {
       id: 'expertise-6',
-      name: 'Technical Documentation & Testing',
+      name: 'Agile Delivery & Technical Leadership',
       description:
-        'Produced and maintained comprehensive technical documentation to ensure clarity and consistency across development phases. Played a key role in the end-to-end testing and deployment of applications, ensuring seamless transitions and operational excellence.',
-    },
+        'Led sprint ceremonies, estimation sessions, and stakeholder workshops. Coordinated delivery across developers, QA, analysts, and clients using Agile/Scrum methodologies. Produced onboarding docs, architectural diagrams, and delivery plans to align cross-functional teams and maintain delivery velocity.',
+      tags: ['Agile', 'Scrum', 'Kanban', 'Jira', 'Confluence', 'Stakeholder Management']
+    }
   ],
   projects: [
+    {
+      title: 'Online Test Platform',
+      isFeatured: true,
+      thumbnail: '/assets/bfg-webapp.png',
+      githubUrl: 'https://github.com/willyyto/TestSystem',
+      liveUrl: '',
+    },
     {
       title: 'OpenHomeLoan CRM Web Application',
       isFeatured: true,
