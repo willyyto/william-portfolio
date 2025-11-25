@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" /> <!-- Blue-600 -->
+      <stop offset="100%" stop-color="#10b981" /> <!-- Emerald-500 -->
+    </linearGradient>
+  </defs>
+  <text x="50%" y="54%" font-family="sans-serif" font-weight="900" font-size="42" fill="url(#grad)" text-anchor="middle" dominant-baseline="middle">WT</text>
+</svg>
