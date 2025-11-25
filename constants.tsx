@@ -4,8 +4,7 @@ import { ResumeData } from './types';
 export const RESUME_DATA: ResumeData = {
   name: "William To",
   title: "Senior Software Engineer",
-  // Ensure you put portfolio-picture.png in public/assets/ folder
-  avatar: "/assets/portfolio-picture.png", 
+  avatar: "/assets/portfolio-picture.png",
   // Ensure you put resume.pdf in public/assets/files/ folder
   resumeUrl: "/assets/files/resume.pdf",
   contact: {
@@ -69,62 +68,55 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "FitNote – Full-Stack Fitness Tracking Platform",
-      tech: ".NET 9, ASP.NET Core, PostgreSQL, GraphQL, Next.js 15, React 19, Tailwind, Apollo Client, Zustand, PWA",
+      tech: ".NET 9, PostgreSQL, GraphQL, Next.js 15, React 19, Tailwind, Docker",
       description: [
         "Built a production-grade fitness platform with offline-first PWA capability, real-time workout tracking, and a searchable 400+ exercise library.",
-        "Designed a scalable GraphQL API using UUID identifiers, schema-driven validation, CQRS-style resolvers, and field-level JWT authorisation for secure and predictable execution.",
-        "Architected a Clean Architecture backend using EF Core, Autofac, and FluentValidation, improving testability, modularity, and separation of concerns.",
-        "Engineered a modern React 19 frontend with shadcn/ui, Apollo cache normalisation, dynamic code-splitting, and Zustand for predictable offline state management.",
-        "Implemented responsive UI/UX patterns, theme management, and accessibility improvements using Tailwind and component composition best practices.",
-        "Utilised Cursor and Claude Code to accelerate refactoring, documentation, test generation, and architectural exploration."
+        "Designed a scalable GraphQL API using UUID identifiers, schema-driven validation, CQRS-style resolvers, and field-level JWT authorisation.",
+        "Architected a Clean Architecture backend using EF Core, Autofac, and FluentValidation.",
+        "Engineered a modern React 19 frontend with shadcn/ui, Apollo cache normalisation, and Zustand for offline state management."
       ],
-      // Ensure you put fitnote.png in public/assets/ folder
-      image: "/assets/fitnote.png",
+      link: "https://fitnote-webapp.vercel.app/",
       github: "github.com/willyyto/FitNote",
-      link: "https://fitnote-webapp.vercel.app/"
+      image: "/assets/fitnote.png"
     },
     {
       title: "Test Platform – Multi-Tenant Assessment System",
-      tech: ".NET 8, React, Vite, Tailwind CSS, SQL Server, JWT, RBAC, CI/CD",
+      tech: ".NET 8, React, Vite, SQL Server, JWT, RBAC, CI/CD",
       description: [
-        "Developed a multi-tenant assessment platform supporting per-tenant branding, timed assessments, question randomisation, and secure role-based access with JWT + RBAC.",
-        "Designed a scalable .NET 8 backend with domain separation, optimised SQL Server schema design, and predictable multi-tenant query performance.",
-        "Engineered a performant React UI with Vite, component composition, and responsive layouts for consistent UX across branded tenants.",
-        "Built an automated CI/CD pipeline enabling reproducible builds, migration safety checks, automated tests, and seamless production deployments."
+        "Developed a multi-tenant assessment platform supporting per-tenant branding, timed assessments, question randomisation, and secure role-based access.",
+        "Designed a scalable .NET 8 backend with domain separation and optimised SQL schema.",
+        "Engineered a performant React UI with Vite, component composition, and responsive layouts.",
+        "Built an automated CI/CD pipeline enabling reproducible builds and migration safety checks."
       ],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-      github: "github.com/willyyto/TestSystem"
+      github: "github.com/willyyto/TestSystem",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
     },
     {
-      title: "Enigma Run – Unity Side Scroller",
-      tech: "Unity, C#, .NET, 2D Animation",
+      title: "Enigma Run – Side Scroller Game",
+      tech: "Unity, C#, Game Development, Physics Engine",
       description: [
-        "Developed a classic 2D side-scrolling platformer game using the Unity Game Engine.",
-        "Implemented complex character movement controllers, physics-based interactions, and enemy AI logic using C# scripts.",
-        "Designed and built immersive level environments with parallax scrolling backgrounds and dynamic asset management."
+        "Developed a 2D side-scrolling platformer using Unity and C# with custom physics interactions.",
+        "Implemented core game mechanics including player movement, obstacle generation, and score tracking systems.",
+        "Optimized game performance and asset management for smooth frame rates."
       ],
       video: "https://player.vimeo.com/video/788888508?h=394b839436"
     }
   ],
   research: [
     {
-      title: "Comparative Analysis of Advanced Language Models: ChatGPT-3 vs Bard",
+      title: "Comparative Analysis of Advanced Language Models",
       institution: "University of Technology Sydney",
-      date: "2023",
-      description: "Conducted a comprehensive comparative analysis of ChatGPT-3 and Google's Bard in a structured debate format on controversial topics. Developed a custom Node.js-based AI debate orchestration tool to automate interactions. Evaluated models based on relevance, coherence, persuasiveness, and factual accuracy. Findings demonstrated ChatGPT's superior conversational fluidity and logical structuring compared to Bard's fact-centric but less cohesive responses.",
-      // Ensure you put chatgpt-vs-bard.pdf in public/assets/files/ folder
+      date: "May 2023",
+      description: "A case study of OpenAI's ChatGPT-3 and Bard debating on controversial topics, analyzing relevance, coherence, and factual accuracy using a custom-built debate tool.",
       link: "/assets/files/chatgpt-vs-bard.pdf",
-      // Ensure you put chatgpt-bard.webp in public/assets/ folder
       image: "/assets/chatgpt-bard.webp"
     },
     {
-      title: "Face Mask Detection Using AI & Machine Learning",
+      title: "Face Mask Detection Using AI and Machine Learning",
       institution: "University of Technology Sydney",
-      date: "2022",
-      description: "Investigated deep learning methodologies for real-time face mask detection to support public health initiatives. Analyzed and compared the efficacy of Convolutional Neural Networks (CNNs), specifically YOLOv3 and ResNet-50 architectures. Concluded that YOLOv3 provided the optimal balance of computational efficiency and detection accuracy for real-time deployment in high-density public spaces.",
-      // Ensure you put face_mask_detection_research_question.pdf in public/assets/files/ folder
+      date: "Aug 2022",
+      description: "Investigated feasibility of face mask detection using deep learning techniques (YOLOv3 and CNN) to enforce public health policies during the pandemic.",
       link: "/assets/files/face_mask_detection_research_question.pdf",
-      // Ensure you put face-mask-detection.jpg in public/assets/ folder
       image: "/assets/face-mask-detection.jpg"
     }
   ],
