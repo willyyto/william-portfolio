@@ -72,9 +72,12 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <div 
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent cursor-pointer tracking-tighter hover:opacity-80 transition-opacity"
+            className="text-2xl font-bold cursor-pointer tracking-tighter hover:opacity-80 transition-opacity"
           >
-            WT
+            {/* Wrapped in span for better browser support (Firefox) on text gradients */}
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
+              WT
+            </span>
           </div>
 
           {/* Desktop Navigation */}

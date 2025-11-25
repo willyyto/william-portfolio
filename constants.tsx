@@ -93,7 +93,7 @@ export const RESUME_DATA: ResumeData = {
         "Built an automated CI/CD pipeline enabling reproducible builds, migration safety checks, automated tests, and seamless production deployments."
       ],
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-      github: "github.com/willyyto/TestPlatform"
+      github: "github.com/willyyto/TestSystem"
     },
     {
       title: "Enigma Run – Unity Side Scroller",
